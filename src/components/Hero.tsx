@@ -1,14 +1,27 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
+import Magnetic from './Magnetic';
 
 const Hero: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const textLeft = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+  const textRight = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 pt-32 pb-20">
+    <section ref={containerRef} className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 overflow-hidden">
       <div className="max-w-[1400px] w-full mx-auto relative z-10 flex flex-col justify-between h-full min-h-[70vh]">
         
         {/* Top Kicker */}
         <motion.div
+          style={{ opacity: opacityFade }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -22,10 +35,11 @@ const Hero: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Massive Typography */}
-        <div className="flex flex-col gap-2">
+        {/* Massive Typography with Scroll Parallax */}
+        <div className="flex flex-col gap-2 w-full">
           <motion.h1 
-            className="text-[12vw] leading-[0.85] font-black tracking-tighter text-black uppercase -ml-[0.05em]"
+            style={{ x: textLeft, opacity: opacityFade }}
+            className="text-[15vw] md:text-[12vw] leading-[0.85] font-black tracking-tighter text-black uppercase -ml-[0.05em] whitespace-nowrap"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -33,7 +47,8 @@ const Hero: React.FC = () => {
             Harsh
           </motion.h1>
           <motion.h1 
-            className="text-[12vw] leading-[0.85] font-black tracking-tighter text-black uppercase text-right -mr-[0.05em]"
+            style={{ x: textRight, opacity: opacityFade }}
+            className="text-[15vw] md:text-[12vw] leading-[0.85] font-black tracking-tighter text-black uppercase text-right -mr-[0.05em] whitespace-nowrap"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -53,12 +68,14 @@ const Hero: React.FC = () => {
             AI & Data Science engineering student focused on building intelligent systems and exploring deep technical architecture.
           </p>
 
-          <a 
-            href="#about"
-            className="group flex items-center justify-center w-20 h-20 rounded-full border border-black/20 hover:border-black hover:bg-black transition-colors duration-500"
-          >
-            <ArrowDown size={24} className="text-black group-hover:text-white transition-colors duration-500" />
-          </a>
+          <Magnetic intensity={0.4}>
+            <a 
+              href="#about"
+              className="group flex items-center justify-center w-24 h-24 rounded-full border border-black/20 hover:border-black hover:bg-black transition-colors duration-500"
+            >
+              <ArrowDown size={32} className="text-black group-hover:text-white transition-colors duration-500" />
+            </a>
+          </Magnetic>
         </motion.div>
 
       </div>

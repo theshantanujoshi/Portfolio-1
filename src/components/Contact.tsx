@@ -1,9 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { Mail, ArrowRight, Link } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [time, setTime] = useState<string>('');
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"]
+  });
+
+  const signatureX = useTransform(scrollYProgress, [0, 1], ["20%", "0%"]);
+  const signatureScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
   useEffect(() => {
     const updateTime = () => {
@@ -22,7 +31,7 @@ const Contact: React.FC = () => {
   }, []);
 
   return (
-    <section id="contact" className="w-full">
+    <section id="contact" ref={containerRef} className="w-full">
       <motion.div 
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +39,7 @@ const Contact: React.FC = () => {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="glass-panel rounded-[3rem] p-10 md:p-20 overflow-hidden relative bg-black !border-black"
       >
-        <div className="flex flex-col lg:flex-row gap-16 items-start mb-20">
+        <div className="flex flex-col lg:flex-row gap-16 items-start mb-20 relative z-10">
           <div className="w-full lg:w-1/3">
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white uppercase mb-4">
               Initiate<br/>Contact
@@ -61,7 +70,7 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Footer Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/10 relative z-10">
           <div className="flex items-center gap-6">
             <a href="https://github.com/harshsingh07i" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors duration-300">
               <Link size={20} />
@@ -78,11 +87,14 @@ const Contact: React.FC = () => {
         </div>
         
         {/* Massive Signature */}
-        <div className="w-full mt-20 flex justify-center opacity-10">
-          <h1 className="text-[15vw] leading-none font-black tracking-tighter text-white uppercase text-center w-full overflow-hidden select-none">
+        <motion.div 
+          style={{ x: signatureX, scale: signatureScale }}
+          className="w-full mt-20 flex justify-center opacity-10 absolute bottom-[-5%] left-0 pointer-events-none"
+        >
+          <h1 className="text-[25vw] leading-none font-black tracking-tighter text-white uppercase text-center w-full overflow-hidden select-none whitespace-nowrap">
             HARSH
           </h1>
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
