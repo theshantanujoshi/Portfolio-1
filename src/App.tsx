@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Iridescence from './components/Iridescence';
 
 function App() {
   useEffect(() => {
@@ -31,7 +32,16 @@ function App() {
   }, []);
 
   return (
-    <main className="w-full min-h-screen bg-[#f0f0f0] dark:bg-[#080808] font-sans selection:bg-[#5E6470] dark:selection:bg-white selection:text-white dark:selection:text-black transition-colors duration-500">
+    <main className="relative w-full min-h-screen bg-transparent font-sans selection:bg-[#5E6470] dark:selection:bg-white selection:text-white dark:selection:text-black transition-colors duration-500">
+      <div className="fixed inset-0 -z-10 bg-[#f0f0f0] dark:bg-[#080808]">
+        <Iridescence
+          color={[0.37, 0.39, 0.44]}
+          mouseReact={true}
+          amplitude={0.1}
+          speed={0.5}
+        />
+      </div>
+
       <Navbar />
       
       <div className="pt-24 pb-12">
