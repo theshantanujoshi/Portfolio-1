@@ -41,21 +41,21 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="w-full max-w-[1400px] mx-auto px-6 py-10">
       <motion.div 
-        className="flex flex-col items-center mb-12"
+        className="flex flex-col items-center mb-16"
         variants={liquidReveal}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <h2 className="text-3xl font-semibold text-[#5E6470] dark:text-white tracking-tight transition-colors duration-500">Experience</h2>
-        <div className="h-1 w-12 bg-[#5E6470] dark:bg-white rounded-full mt-4 opacity-50 dark:opacity-30 transition-colors duration-500"></div>
+        <h2 className="text-4xl font-bold text-[#5E6470] dark:text-white tracking-tighter transition-colors duration-500">Experience</h2>
+        <div className="h-1.5 w-16 bg-[#5E6470] dark:bg-white rounded-full mt-6 opacity-80 dark:opacity-60 transition-colors duration-500"></div>
       </motion.div>
 
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-4xl mx-auto space-y-10">
         {experiences.map((exp, index) => (
           <motion.div 
             key={index}
-            className="relative flex items-start gap-6 bg-white/50 dark:bg-white/5 backdrop-blur-md border border-[#e5e7eb] dark:border-white/10 p-6 md:p-8 rounded-[1.5rem] shadow-sm hover:shadow-md transition-all duration-500"
+            className="relative flex items-start gap-8 bg-white/70 dark:bg-white/10 backdrop-blur-2xl border border-white/40 dark:border-white/20 p-8 md:p-12 rounded-[2.5rem] shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
             variants={{
               hidden: { opacity: 0, y: 50, filter: 'blur(10px)' },
               visible: { 
@@ -69,18 +69,18 @@ const Experience: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
-            <div className="hidden sm:flex shrink-0 w-12 h-12 bg-white dark:bg-white/10 rounded-full shadow-sm items-center justify-center border border-[#e5e7eb] dark:border-white/10 transition-colors duration-500">
-              <Briefcase size={20} className="text-[#5E6470] dark:text-white transition-colors duration-500" />
+            <div className="hidden sm:flex shrink-0 w-16 h-16 bg-white/80 dark:bg-black/40 rounded-full shadow-sm items-center justify-center border border-white/60 dark:border-white/20 transition-colors duration-500">
+              <Briefcase size={24} className="text-[#5E6470] dark:text-white transition-colors duration-500" />
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-[#5E6470] dark:text-white transition-colors duration-500">{exp.role}</h3>
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-1 mb-4">
-                <span className="text-[#5E6470] dark:text-gray-300 font-medium opacity-90 transition-colors duration-500">@ {exp.company}</span>
-                <span className="text-sm text-[#5E6470] dark:text-gray-300 opacity-80 bg-white dark:bg-black/30 px-3 py-1 rounded-full border border-[#e5e7eb] dark:border-white/10 mt-2 sm:mt-0 inline-block w-fit transition-colors duration-500">
+              <h3 className="text-2xl font-bold text-[#5E6470] dark:text-white tracking-tight transition-colors duration-500">{exp.role}</h3>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-2 mb-6">
+                <span className="text-lg text-[#5E6470] dark:text-gray-200 font-semibold opacity-95 transition-colors duration-500">@ {exp.company}</span>
+                <span className="text-sm font-bold tracking-wider uppercase text-[#5E6470] dark:text-gray-300 opacity-90 bg-white/80 dark:bg-black/50 px-4 py-1.5 rounded-full border border-white/60 dark:border-white/20 mt-3 sm:mt-0 inline-block w-fit transition-colors duration-500">
                   {exp.date}
                 </span>
               </div>
-              <ul className="list-disc list-inside space-y-2 text-[#5E6470] dark:text-gray-400 opacity-90 transition-colors duration-500">
+              <ul className="list-disc list-inside space-y-3 text-lg font-medium text-[#5E6470] dark:text-gray-300 opacity-95 transition-colors duration-500">
                 {exp.duties.map((duty, i) => (
                   <li key={i} className="leading-relaxed">{duty}</li>
                 ))}

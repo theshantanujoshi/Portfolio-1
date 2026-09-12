@@ -16,7 +16,7 @@ const About: React.FC = () => {
   return (
     <section id="about" className="w-full max-w-[1400px] mx-auto px-6 py-10 flex flex-col items-center">
       <motion.div 
-        className="w-full flex flex-col md:flex-row items-center gap-12 bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-[2rem] p-8 md:p-12 shadow-sm transition-colors duration-500"
+        className="w-full flex flex-col md:flex-row items-center gap-12 bg-white/70 dark:bg-white/10 backdrop-blur-2xl border border-white/40 dark:border-white/20 rounded-[2.5rem] p-10 md:p-16 shadow-lg transition-colors duration-500"
         variants={liquidReveal}
         initial="hidden"
         whileInView="visible"
@@ -24,21 +24,21 @@ const About: React.FC = () => {
       >
         {/* Profile Picture */}
         <div className="relative shrink-0">
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white dark:border-white/20 shadow-xl relative z-10 transition-colors duration-500">
+          <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white dark:border-white/20 shadow-2xl relative z-10 transition-colors duration-500">
             <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Harsh Pratap Singh" className="w-full h-full object-cover" />
           </div>
           {/* Subtle glow behind picture */}
-          <div className="absolute inset-0 bg-[#5E6470] dark:bg-white blur-3xl opacity-20 dark:opacity-10 rounded-full scale-110 z-0 transition-opacity duration-500"></div>
+          <div className="absolute inset-0 bg-[#5E6470] dark:bg-white blur-3xl opacity-30 dark:opacity-20 rounded-full scale-125 z-0 transition-opacity duration-500"></div>
         </div>
 
         {/* Details & Education */}
         <div className="flex-1 text-center md:text-left">
-          <h2 className="text-3xl font-semibold text-[#5E6470] dark:text-white tracking-tight mb-4 transition-colors duration-500">About Me</h2>
-          <p className="text-base md:text-lg text-[#5E6470] dark:text-gray-300 opacity-90 mb-8 leading-relaxed max-w-2xl transition-colors duration-500">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#5E6470] dark:text-white tracking-tighter mb-6 transition-colors duration-500">About Me</h2>
+          <p className="text-lg md:text-xl text-[#5E6470] dark:text-gray-200 font-medium opacity-95 mb-10 leading-relaxed max-w-2xl transition-colors duration-500">
             I am a highly motivated Artificial Intelligence and Data Science student with strong foundations in mathematics, data analytics, and AI systems. I have experience building real-world projects, participating in national-level hackathons, and applying AI to data-driven decision making.
           </p>
 
-          <div className="inline-flex items-start gap-4 bg-white/50 dark:bg-black/30 border border-white/40 dark:border-white/10 p-5 rounded-2xl transition-colors duration-500">
+          <div className="inline-flex items-start gap-5 bg-white/80 dark:bg-black/40 border border-white/60 dark:border-white/20 p-6 rounded-3xl shadow-sm transition-colors duration-500">
             <div className="p-3 bg-white dark:bg-white/10 rounded-xl shadow-sm border border-transparent dark:border-white/10 transition-colors duration-500">
               <GraduationCap className="text-[#5E6470] dark:text-white transition-colors duration-500" size={24} />
             </div>

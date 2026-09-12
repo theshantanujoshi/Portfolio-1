@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-12T16:55:00Z",
+  "title": "Design System: Harsh Pratap Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Technical Slate",
+        "canonical": "#5E6470",
+        "tonalRamp": ["#1A1C20", "#2D3037", "#444852", "#5E6470", "#7C8390", "#9CA3AF", "#C4C9D2", "#E8EAED"]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Background Light",
+        "canonical": "#f0f0f0",
+        "tonalRamp": ["#111111", "#333333", "#555555", "#777777", "#999999", "#BBBBBB", "#DDDDDD", "#f0f0f0"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-sm",
+        "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+        "purpose": "Default elevation for cards and buttons."
+      },
+      {
+        "name": "shadow-md",
+        "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        "purpose": "Hover elevation for interactive elements."
+      }
+    ],
+    "motion": [
+      {
+        "name": "transition-all duration-500",
+        "value": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Standard physics for cards lifting on hover."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Used for main calls to action like 'Resume' or 'Contact'.",
+      "html": "<button class=\"ds-btn-primary\">GET IN TOUCH</button>",
+      "css": ".ds-btn-primary { background: #5E6470; color: #ffffff; padding: 16px 32px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 16px; border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.05); } .ds-btn-primary:hover { background: #000000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transform: translateY(-2px); }"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Standard container for projects, experiences, and skills.",
+      "html": "<div class=\"ds-card\"><h3 style=\"margin:0 0 8px;font-family:'Inter',sans-serif;font-weight:600;\">Card Title</h3><p style=\"margin:0;font-family:'Inter',sans-serif;font-size:14px;color:#5E6470;\">A brief description of the content inside the card.</p></div>",
+      "css": ".ds-card { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid #e5e7eb; border-radius: 24px; padding: 24px 32px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.5s ease; cursor: pointer; } .ds-card:hover { box-shadow: 0 4px 6px rgba(0,0,0,0.1); transform: translateY(-4px); }"
+    },
+    {
+      "name": "Skill Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Displays small tags like skills or tech stack.",
+      "html": "<span class=\"ds-chip\">React.js</span>",
+      "css": ".ds-chip { display: inline-block; background: #ffffff; color: #5E6470; border: 1px solid #e5e7eb; border-radius: 9999px; padding: 4px 12px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Intelligent Slate",
+    "overview": "This system embraces a technical, analytical, and data-driven aesthetic. It prioritizes structure and clarity, utilizing a monotonous, restrained color palette to keep the focus on content and achievements. The design is layered and tactile, employing subtle glassmorphic surfaces, soft shadows, and gentle hover movements to create an interactive experience that feels responsive and polished.",
+    "keyCharacteristics": [
+      "Monotonous and restrained color palette.",
+      "Layered, tactile surfaces with glassmorphism.",
+      "Large, friendly border radii contrasting with technical typography.",
+      "Smooth, physics-based motion on interactions."
+    ],
+    "rules": [
+      {
+        "name": "The Monotonous Rule",
+        "body": "Stick to the grayscale and slate spectrum. Avoid introducing new vibrant accent colors; use opacity and contrast to create visual hierarchy.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tactile Lift Rule",
+        "body": "Elements that can be interacted with should respond physically. When hovered, cards and buttons should lift slightly (-translate-y-1) and increase their shadow spread.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use large border radii (24px - 32px) for structural containers to maintain the approachable feel.",
+      "Do apply backdrop-blur-md and semi-transparent backgrounds to cards to create depth against the solid background.",
+      "Do ensure physical, tactile transitions on interactive elements (e.g., -translate-y-1 on hover)."
+    ],
+    "donts": [
+      "Don't introduce vibrant or saturated colors outside of the monochrome/slate spectrum.",
+      "Don't use sharp, 0px border radii on structural elements.",
+      "Don't use solid, opaque backgrounds for cards; always retain a degree of glassmorphism."
+    ]
+  }
+}

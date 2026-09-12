@@ -44,15 +44,15 @@ const Navbar: React.FC = () => {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="max-w-[1400px] mx-auto bg-white/10 dark:bg-black/10 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl px-6 py-3 flex items-center justify-between shadow-sm">
+      <div className="max-w-[1400px] mx-auto bg-white/70 dark:bg-black/30 backdrop-blur-2xl border border-white/40 dark:border-white/20 rounded-[2rem] px-8 py-4 flex items-center justify-between shadow-md transition-colors duration-500">
         
         {/* Left: Logo */}
         <a href="#" className="flex items-center hover:opacity-80 transition-opacity">
-          <img src={`${import.meta.env.BASE_URL}h_logo.png`} alt="Logo" className="w-8 h-8 object-contain invert dark:invert-0" />
+          <img src={`${import.meta.env.BASE_URL}h_logo.png`} alt="Logo" className="w-9 h-9 object-contain invert dark:invert-0" />
         </a>
 
         {/* Center: Links (Hidden on mobile) */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden md:flex items-center gap-10 text-sm font-bold tracking-tight">
           {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
             <a 
               key={item} 
@@ -65,21 +65,21 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right: Actions */}
-        <div className="flex items-center gap-3 md:gap-4">
+        <div className="flex items-center gap-4">
           <button 
             onClick={toggleTheme}
-            className="p-2 rounded-xl bg-white/50 dark:bg-black/50 text-[#5E6470] dark:text-gray-300 hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-sm"
+            className="p-3 rounded-2xl bg-white/80 dark:bg-black/60 text-[#5E6470] dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-sm border border-white/60 dark:border-white/20"
             aria-label="Toggle theme"
           >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           
           <a 
             href={`${import.meta.env.BASE_URL}resume.pdf`} 
             download="HARSH_PRATAP_SINGH_Resume.pdf"
-            className="hidden sm:flex items-center gap-2 bg-white dark:bg-white/10 text-[#5E6470] dark:text-white px-5 py-2 rounded-xl text-sm font-medium hover:bg-gray-100 dark:hover:bg-white/20 transition-colors shadow-sm"
+            className="hidden sm:flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-2xl text-sm font-bold hover:bg-gray-800 dark:hover:bg-gray-200 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
-            <Download size={16} />
+            <Download size={18} />
             <span>Resume</span>
           </a>
 
