@@ -39,7 +39,7 @@ const Experience: React.FC = () => {
           {/* Left: Architectural Label */}
           <div className="md:col-span-4 flex flex-col justify-between">
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/40 dark:text-white/40 mb-4 block">
+              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/60 dark:text-white/60 mb-4 block">
                 [ 02 — OPS ]
               </span>
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-black dark:text-white uppercase mb-4 leading-none">
@@ -65,7 +65,7 @@ const Experience: React.FC = () => {
                       <h3 className="text-3xl font-black text-black dark:text-white tracking-tight uppercase leading-none">{exp.role}</h3>
                       <p className="text-xl font-bold text-black/60 dark:text-white/60 tracking-tight mt-2">{exp.company}</p>
                     </div>
-                    <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/40 dark:text-white/40 whitespace-nowrap mt-1">
+                    <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/60 dark:text-white/60 whitespace-nowrap mt-1">
                       {exp.duration}
                     </span>
                   </div>

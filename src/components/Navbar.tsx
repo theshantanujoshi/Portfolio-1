@@ -49,10 +49,10 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right: Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           <button
             onClick={toggleTheme}
-            className="p-2 text-black dark:text-white hover:opacity-70 transition-colors"
+            className="w-11 h-11 flex items-center justify-center text-black dark:text-white hover:opacity-70 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-black dark:text-white hover:opacity-70 transition-colors"
+            className="md:hidden w-11 h-11 flex items-center justify-center text-black dark:text-white hover:opacity-70 transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}

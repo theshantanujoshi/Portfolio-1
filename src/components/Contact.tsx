@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
           {/* Left: Architectural Label */}
           <div className="md:col-span-4 flex flex-col justify-between">
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/40 dark:text-white/40 mb-4 block">
+              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/60 dark:text-white/60 mb-4 block">
                 [ 05 — CONNECTION ]
               </span>
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-black dark:text-white uppercase mb-4 leading-none">
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                 <a href="mailto:wharshsingh@gmail.com" className="group flex-1 bg-white/40 dark:bg-black/40 border border-black/10 dark:border-white/10 p-8 rounded-[2rem] flex items-center gap-6 hover:bg-black dark:hover:bg-white transition-all duration-500 w-full cursor-pointer shadow-sm">
                   <Mail size={32} strokeWidth={1} className="text-black dark:text-white shrink-0 group-hover:text-white dark:group-hover:text-black transition-colors duration-500" />
                   <div className="flex flex-col items-start overflow-hidden">
-                    <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-black/50 dark:text-white/50 mb-1 group-hover:text-white/70 dark:group-hover:text-black/70 transition-colors duration-500">Personal</span>
+                    <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-black/70 dark:text-white/70 mb-1 group-hover:text-white/70 dark:group-hover:text-black/70 transition-colors duration-500">Personal</span>
                     <span className="text-lg md:text-xl font-bold tracking-tight text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-500 truncate">
                       wharshsingh@gmail.com
                     </span>
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                 <a href="mailto:b24bs1154@iitj.ac.in" className="group flex-1 bg-white/40 dark:bg-black/40 border border-black/10 dark:border-white/10 p-8 rounded-[2rem] flex items-center gap-6 hover:bg-black dark:hover:bg-white transition-all duration-500 w-full cursor-pointer shadow-sm">
                   <Mail size={32} strokeWidth={1} className="text-black dark:text-white shrink-0 group-hover:text-white dark:group-hover:text-black transition-colors duration-500" />
                   <div className="flex flex-col items-start overflow-hidden">
-                    <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-black/50 dark:text-white/50 mb-1 group-hover:text-white/70 dark:group-hover:text-black/70 transition-colors duration-500">College</span>
+                    <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-black/70 dark:text-white/70 mb-1 group-hover:text-white/70 dark:group-hover:text-black/70 transition-colors duration-500">College</span>
                     <span className="text-lg md:text-xl font-bold tracking-tight text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-500 truncate">
                       b24bs1154@iitj.ac.in
                     </span>

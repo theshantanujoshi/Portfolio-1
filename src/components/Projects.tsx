@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
           {/* Left: Architectural Label */}
           <div className="md:col-span-4 flex flex-col justify-between">
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/40 dark:text-white/40 mb-4 block">
+              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/60 dark:text-white/60 mb-4 block">
                 [ 03 — SYSTEMS ]
               </span>
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-black dark:text-white uppercase mb-4 leading-none">

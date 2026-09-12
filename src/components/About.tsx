@@ -16,7 +16,7 @@ const About: React.FC = () => {
           {/* Left: Architectural Label */}
           <div className="md:col-span-4 flex flex-col justify-between">
             <div>
-              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/40 dark:text-white/40 mb-4 block">
+              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/60 dark:text-white/60 mb-4 block">
                 [ 01 — INTEL ]
               </span>
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-black dark:text-white uppercase mb-4 leading-none">
@@ -25,7 +25,7 @@ const About: React.FC = () => {
             </div>
             
             <a href="https://linkedin.com/in/harsh-singh-b89925315/" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-4 group mt-12 w-fit">
-              <span className="text-sm font-bold uppercase tracking-widest text-black dark:text-white group-hover:text-black/50 dark:group-hover:text-white/50 transition-colors">View Full Profile</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-black dark:text-white group-hover:text-black/70 dark:group-hover:text-white/50 transition-colors">View Full Profile</span>
               <span className="w-10 h-[1px] bg-black dark:bg-white group-hover:w-16 transition-all duration-300" />
               <ArrowRight size={16} strokeWidth={1.5} className="text-black dark:text-white" />
             </a>
@@ -60,7 +60,7 @@ const About: React.FC = () => {
             </div>
 
             <a href="https://linkedin.com/in/harsh-singh-b89925315/" target="_blank" rel="noopener noreferrer" className="md:hidden inline-flex items-center gap-4 group w-fit">
-              <span className="text-sm font-bold uppercase tracking-widest text-black dark:text-white group-hover:text-black/50 dark:group-hover:text-white/50 transition-colors">View Full Profile</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-black dark:text-white group-hover:text-black/70 dark:group-hover:text-white/50 transition-colors">View Full Profile</span>
               <span className="w-10 h-[1px] bg-black dark:bg-white group-hover:w-16 transition-all duration-300" />
               <ArrowRight size={16} strokeWidth={1.5} className="text-black dark:text-white" />
             </a>
