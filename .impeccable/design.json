@@ -1,54 +1,54 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-12T17:18:00Z",
+  "generatedAt": "2026-09-12T17:37:00Z",
   "title": "Design System: Harsh Pratap Portfolio",
   "extensions": {
     "colorMeta": {
       "primary": {
         "role": "primary",
-        "displayName": "Glitched Bronze",
-        "canonical": "#B45309",
-        "tonalRamp": ["#78350F", "#92400E", "#B45309", "#D97706", "#F59E0B"]
+        "displayName": "Obsidian Black",
+        "canonical": "#000000",
+        "tonalRamp": ["#000000", "#111111", "#222222"]
       },
       "background": {
         "role": "neutral",
-        "displayName": "Midnight Void",
-        "canonical": "#070b14",
-        "tonalRamp": []
+        "displayName": "Silver Canvas",
+        "canonical": "#f8f9fa",
+        "tonalRamp": ["#ffffff", "#f8f9fa", "#e9ecef"]
       }
     }
   },
   "components": [
     {
-      "name": "Midnight Glass Card",
+      "name": "Architectural Glass Card",
       "kind": "card",
-      "refersTo": "card",
-      "description": "Deep navy translucent containers.",
-      "html": "<div class=\"ds-card\"><h3 style=\"color:#FDE68A;\">Card Title</h3></div>",
-      "css": ".ds-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(24px); border-radius: 40px; }"
+      "refersTo": "glass-panel",
+      "description": "Clear, heavily blurred container over liquid silver.",
+      "html": "<div class=\"glass-panel\"><h3 style=\"color:#000000;\">Card Title</h3></div>",
+      "css": ".glass-panel { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(40px); border-radius: 48px; border: 1px solid rgba(255, 255, 255, 0.6); }"
     },
     {
-      "name": "Glitch Header",
+      "name": "Brutalist Header",
       "kind": "typography",
-      "refersTo": "glitch",
-      "description": "Kinetic chromatic aberration text.",
-      "html": "<h1 class=\"glitch-effect\" data-text=\"GLITCH\">GLITCH</h1>",
-      "css": ".glitch-effect { position: relative; display: inline-block; }"
+      "refersTo": "display",
+      "description": "Massive, high-contrast, tightly tracked uppercase typography.",
+      "html": "<h1 class=\"text-[12vw] font-black tracking-tighter uppercase text-black\">HARSH</h1>",
+      "css": ""
     }
   ],
   "narrative": {
-    "northStar": "Glitched Rust & Midnight",
-    "overview": "A dark, atmospheric identity combining a fast-moving bronze iridescent shader over a deep midnight background. Highlighted by CSS-driven glitch typography and rich amber accents.",
+    "northStar": "Liquid Silver & Architectural Glass",
+    "overview": "A hyper-modern, architectural portfolio featuring massive typography and a liquid silver iridescent fluid overlaying a completely monochromatic structural UI.",
     "keyCharacteristics": [
-      "Kinetic bronze shader fluid.",
-      "Midnight glass cards.",
-      "Saturated bronze/amber text.",
-      "Chromatic glitch text animation."
+      "Liquid silver/pearl shader fluid.",
+      "Thick clear glass cards.",
+      "Massive brutalist typography (Inter Black).",
+      "Cinematic scroll reveals."
     ],
     "rules": [
       {
         "name": "The Contrast Rule",
-        "body": "Never use light mode backgrounds. The entire site exists in a perpetual dark/midnight state, illuminated only by the rust-colored fluid and amber typography.",
+        "body": "This is a light-mode absolute theme. The entire site exists in a blinding, hyper-clean silver environment. No dark mode toggles.",
         "section": "colors"
       }
     ],

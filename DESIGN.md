@@ -1,18 +1,18 @@
 ---
 name: Harsh Pratap Portfolio
-description: A bold, glitched technical portfolio featuring rust and deep midnight blue hues.
+description: A hyper-modern, architectural portfolio featuring massive typography and liquid silver fluid over clear glass.
 colors:
-  primary: "#B45309"
-  background: "#070b14"
-  surface: "rgba(15, 23, 42, 0.7)"
-  border: "rgba(120, 53, 15, 0.3)"
+  primary: "#000000"
+  background: "#f8f9fa"
+  surface: "rgba(255, 255, 255, 0.4)"
+  border: "rgba(255, 255, 255, 0.6)"
 typography:
   display:
     fontFamily: '"Inter", sans-serif'
-    fontWeight: 700
+    fontWeight: 900
   headline:
     fontFamily: '"Inter", sans-serif'
-    fontWeight: 700
+    fontWeight: 900
   body:
     fontFamily: '"Inter", sans-serif'
     fontWeight: 500
@@ -21,7 +21,7 @@ rounded:
   lg: "16px"
   xl: "24px"
   2xl: "32px"
-  3xl: "40px"
+  3xl: "48px"
   full: "9999px"
 spacing:
   md: "16px"
@@ -31,40 +31,41 @@ spacing:
 components:
   button-primary:
     backgroundColor: "{colors.primary}"
-    textColor: "#fef3c7"
-    rounded: "{rounded.lg}"
+    textColor: "#ffffff"
+    rounded: "{rounded.full}"
     padding: "20px 40px"
   card:
     backgroundColor: "{colors.surface}"
     rounded: "{rounded.3xl}"
-    padding: "32px 48px"
+    padding: "40px 80px"
 ---
 
 # Design System: Harsh Pratap Portfolio
 
 ## Overview
 
-**Creative North Star: "Glitched Rust & Midnight"**
+**Creative North Star: "Liquid Silver & Architectural Glass"**
 
-This system replaces the prior clean slate with a highly kinetic, atmospheric identity. A deep, dark bluish metallic background (`#070b14`) is driven by a restless, iridescent rust-brown shader. The UI floats on thick, dark midnight glass panels, accented heavily by saturated amber and bronze (`bg-amber-800`, `text-amber-200`). The focal point of the identity is a CSS-driven chromatic glitch effect on the hero typography, lending it a chaotic, futuristic hacker aesthetic.
+This system represents a complete structural and aesthetic turnaround. Moving away from dark atmospheric glitch themes, it embraces a clinical, high-end, brutalist aesthetic. The UI is built on a foundation of liquid silver/pearl (a high-brightness Iridescence shader) overlaid with perfectly clear, heavily blurred glass panels. Typography is massive, unapologetic, and purely monochromatic.
 
 **Key Characteristics:**
-- Kinetic, fast-moving bronze/rust fluid background over midnight blue.
-- Deep midnight glass cards (`bg-[#0f172a]/70`).
-- Saturated Bronze/Rust typography and buttons (`text-amber-200`, `bg-amber-800`).
-- Chromatic aberration glitch effects (`glitch-effect`) on massive display text.
-- Heavy tactile elevation combined with buttery Lenis smooth scrolling.
+- Liquid Silver shader fluid (`bg-[#f8f9fa]` with pearl iridescence).
+- Heavily blurred Architectural Glass (`bg-white/40 backdrop-blur-[40px]`).
+- Brutalist Typography (Inter Black `font-black`, massive `text-[12vw]`, highly negative tracking).
+- Absolute high-contrast monochromatic foregrounds (Pure Black and Pure White).
+- Scroll-linked cinematic reveals via Framer Motion.
 
 ## Colors
 
-### Primary Accent (The Rust)
-- **Amber/Bronze** (`text-amber-200`, `bg-amber-800`): The signature accent color used for all highlights, buttons, and titles. It brings a fiery, metallic contrast against the dark background.
+### Primary Accent (Pure Monochromatic)
+- **Obsidian Black** (`#000000`): Used for all text, headings, and primary buttons. Creates stark architectural contrast.
+- **Pure White** (`#ffffff`): Used for glass highlights and button text.
 
-### Neutral (The Midnight)
-- **Deep Midnight Canvas** (`#070b14`): The underlying void.
-- **Midnight Glass** (`bg-[#0f172a]/70`): Translucent navy cards that capture the kinetic shader fluid behind them.
+### Neutral (The Environment)
+- **Silver Canvas** (`#f8f9fa`): The underlying void that the liquid silver fluid moves across.
+- **Clear Glass** (`rgba(255, 255, 255, 0.4)`): Thick, highly blurred panels that catch the fluid motion.
 
-**The Contrast Rule:** Never use light mode backgrounds. The entire site exists in a perpetual dark/midnight state, illuminated only by the rust-colored fluid and amber typography.
+**The Contrast Rule:** This is a light-mode absolute theme. The entire site exists in a blinding, hyper-clean silver environment. No dark mode toggles.
 
 ## Typography
 
@@ -72,18 +73,18 @@ This system replaces the prior clean slate with a highly kinetic, atmospheric id
 **Body Font:** Inter (with sans-serif)
 
 ### Hierarchy
-- **Display** (700, text-9xl, tracking-tighter, `.glitch-effect`): The hero title, constantly flickering with red and blue chromatic offsets.
-- **Headline** (700, text-4xl/5xl, text-amber-200): Used for major section titles.
-- **Body** (500, text-lg/xl, text-amber-200/80): Rust-tinted body text.
+- **Display** (900, `text-[12vw]`, `tracking-tighter`, `uppercase`): Used for the massive hero name split across the screen.
+- **Headline** (900, `text-4xl/5xl`, `tracking-tighter`, `uppercase`): Used for major section titles, often stacked.
+- **Body** (500, `text-lg/xl`, `text-black/90`): Clean, balanced, and perfectly legible.
 
 ## Elevation & Motion
 
-- **Fluid:** The background shader runs at `speed={1.5}` for a restless, churning effect.
-- **Glitch:** Continuous `clip-path` animation with `text-shadow` offsets creates the signature glitch identity.
+- **Fluid:** The background shader is high-brightness, moving slowly like liquid mercury.
+- **Cinematic Reveals:** Elements fade and slide up (`y: 40` to `0`) sequentially as the user scrolls, driven by Lenis and Framer Motion's `whileInView`.
 - **Scroll:** Global `Lenis` smooth scrolling provides luxurious, frictionless navigation.
 
 ## Shapes
 
-- **Main Sections/Wrappers:** 40px (`rounded-[2.5rem]`)
-- **Cards:** 32px (`rounded-[2rem]`)
-- **Buttons & Small Containers:** 16px (`rounded-2xl`)
+- **Main Sections/Wrappers:** 48px (`rounded-[3rem]`)
+- **Cards & Elements:** 32px (`rounded-[2rem]`)
+- **Buttons & Tags:** Fully rounded (`rounded-full`)

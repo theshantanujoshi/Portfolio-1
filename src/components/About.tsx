@@ -1,58 +1,64 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { GraduationCap } from 'lucide-react';
-
-export const liquidReveal = {
- hidden: { opacity: 0, y: 60, filter: 'blur(10px)' },
- visible: { 
- opacity: 1, 
- y: 0, 
- filter: 'blur(0px)',
- transition: { duration: 1.2, type: "spring" as const, bounce: 0.4 } 
- }
-};
+import { GraduationCap, MapPin, Calendar, ArrowUpRight } from 'lucide-react';
 
 const About: React.FC = () => {
- return (
- <section id="about" className="w-full max-w-[1400px] mx-auto px-6 py-10 flex flex-col items-center">
- <motion.div 
- className="w-full flex flex-col md:flex-row items-center gap-12 bg-[#0f172a]/70 backdrop-blur-2xl border border-white/40 border-amber-900/30 rounded-[2.5rem] p-10 md:p-16 shadow-lg transition-colors duration-500"
- variants={liquidReveal}
- initial="hidden"
- whileInView="visible"
- viewport={{ once: true, margin: "-100px" }}
- >
- {/* Profile Picture */}
- <div className="relative shrink-0">
- <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-8 border-white border-amber-900/30 shadow-2xl relative z-10 transition-colors duration-500">
- <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Harsh Pratap Singh" className="w-full h-full object-cover" />
- </div>
- {/* Subtle glow behind picture */}
- <div className="absolute inset-0 bg-amber-800 blur-3xl opacity-30 rounded-full scale-125 z-0 transition-opacity duration-500"></div>
- </div>
+  return (
+    <section id="about" className="w-full">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="glass-panel rounded-[3rem] p-10 md:p-20 overflow-hidden relative group"
+      >
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          
+          {/* Left: Heading */}
+          <div className="w-full lg:w-1/3">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black uppercase mb-4">
+              System<br/>Intel
+            </h2>
+            <div className="h-1 w-12 bg-black"></div>
+          </div>
 
- {/* Details & Education */}
- <div className="flex-1 text-center md:text-left">
- <h2 className="text-4xl md:text-5xl font-bold text-amber-200 tracking-tighter mb-6 transition-colors duration-500">About Me</h2>
- <p className="text-lg md:text-xl text-amber-200/90 font-medium opacity-95 mb-10 leading-relaxed max-w-2xl transition-colors duration-500">
- I am a highly motivated Artificial Intelligence and Data Science student with strong foundations in mathematics, data analytics, and AI systems. I have experience building real-world projects, participating in national-level hackathons, and applying AI to data-driven decision making.
- </p>
+          {/* Right: Content */}
+          <div className="w-full lg:w-2/3 flex flex-col gap-10">
+            <p className="text-2xl md:text-3xl font-medium text-black/90 leading-tight tracking-tight">
+              I build and research machine learning architectures, data pipelines, and intelligent interfaces. My goal is to bridge the gap between theoretical AI and production-grade engineering.
+            </p>
 
- <div className="inline-flex items-start gap-5 bg-[#0f172a]/90 border border-amber-900/30 p-6 rounded-3xl shadow-sm transition-colors duration-500">
- <div className="p-3 bg-white /10 rounded-xl shadow-sm border border-transparent dark:border-white/10 transition-colors duration-500">
- <GraduationCap className="text-amber-200 transition-colors duration-500" size={24} />
- </div>
- <div className="text-left">
- <h3 className="font-semibold text-amber-200 text-lg transition-colors duration-500">Indian Institute of Technology (IIT) Jodhpur</h3>
- <p className="text-amber-200 text-amber-200/60 opacity-90 text-sm transition-colors duration-500">Bachelors in Artificial Intelligence & Data Science</p>
- <p className="text-amber-200 font-medium text-sm mt-1 transition-colors duration-500">2024 – 2028 (Expected)</p>
- </div>
- </div>
- </div>
+            {/* Education Card */}
+            <div className="bg-white/50 border border-white p-8 rounded-3xl mt-4">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center">
+                  <GraduationCap className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-black">IIT Jodhpur</h3>
+                  <p className="text-black/60 font-medium">B.Tech AI & Data Science</p>
+                </div>
+              </div>
 
- </motion.div>
- </section>
- );
+              <div className="flex flex-wrap gap-4">
+                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black/5 px-4 py-2 rounded-full text-black/70">
+                  <Calendar size={16} /> 2024–2028
+                </span>
+                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black/5 px-4 py-2 rounded-full text-black/70">
+                  <MapPin size={16} /> Rajasthan, India
+                </span>
+              </div>
+            </div>
+
+            <a href="https://linkedin.com/in/harsh-singh-b89925315/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-black uppercase tracking-widest hover:opacity-50 transition-opacity w-fit mt-4">
+              <span>View Full Profile</span>
+              <ArrowUpRight size={20} />
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
 };
 
 export default About;

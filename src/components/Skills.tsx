@@ -1,82 +1,88 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Code2, Brain, Calculator, ShieldCheck } from 'lucide-react';
-import { liquidReveal } from './About';
+import { Code, Database, Terminal, Cpu } from 'lucide-react';
 
 const skillCategories = [
- {
- title: "Programming & Data",
- icon: <Code2 size={24} />,
- skills: ["Python", "SQL", "EDA", "Data Cleaning", "Predictive Modeling"]
- },
- {
- title: "AI & Analytics",
- icon: <Brain size={24} />,
- skills: ["Generative AI Tools", "Machine Learning", "Business Intelligence"]
- },
- {
- title: "Mathematics",
- icon: <Calculator size={24} />,
- skills: ["Linear Algebra", "Probability & Statistics", "Numerical Optimization"]
- },
- {
- title: "Tools & Security",
- icon: <ShieldCheck size={24} />,
- skills: ["Power BI", "Jupyter", "Cybersecurity", "IAM"]
- }
+  {
+    title: "Core Stack",
+    icon: <Terminal size={24} />,
+    skills: ["Python", "C++", "C", "JavaScript", "TypeScript"]
+  },
+  {
+    title: "AI & ML",
+    icon: <Cpu size={24} />,
+    skills: ["TensorFlow", "PyTorch", "Scikit-Learn", "OpenCV", "NLP"]
+  },
+  {
+    title: "Architecture",
+    icon: <Code size={24} />,
+    skills: ["React", "Node.js", "Express", "Tailwind CSS", "Next.js"]
+  },
+  {
+    title: "Data & Ops",
+    icon: <Database size={24} />,
+    skills: ["SQL", "MongoDB", "Git", "Docker", "AWS"]
+  }
 ];
 
 const Skills: React.FC = () => {
- return (
- <section id="skills" className="w-full max-w-[1400px] mx-auto px-6 py-10">
- <motion.div 
- className="flex flex-col items-center mb-16"
- variants={liquidReveal}
- initial="hidden"
- whileInView="visible"
- viewport={{ once: true, margin: "-50px" }}
- >
- <h2 className="text-4xl font-bold text-amber-200 tracking-tighter transition-colors duration-500">Technical Skills</h2>
- <div className="h-1.5 w-16 bg-amber-800 rounded-full mt-6 opacity-80 transition-colors duration-500"></div>
- </motion.div>
+  return (
+    <section id="skills" className="w-full">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="glass-panel rounded-[3rem] p-10 md:p-20 overflow-hidden relative"
+      >
+        <div className="flex flex-col lg:flex-row gap-16 items-start mb-16">
+          <div className="w-full lg:w-1/3">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black uppercase mb-4">
+              Technical<br/>Arsenal
+            </h2>
+            <div className="h-1 w-12 bg-black"></div>
+          </div>
+          <div className="w-full lg:w-2/3">
+            <p className="text-2xl md:text-3xl font-medium text-black/90 leading-tight tracking-tight">
+              A comprehensive stack spanning low-level systems programming to high-level machine learning interfaces.
+            </p>
+          </div>
+        </div>
 
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
- {skillCategories.map((category, index) => (
- <motion.div 
- key={index}
- className="flex flex-col bg-[#0f172a]/70 backdrop-blur-2xl border border-white/40 border-amber-900/30 p-8 rounded-[2rem] shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
- variants={{
- hidden: { opacity: 0, y: 50, filter: 'blur(10px)' },
- visible: { 
- opacity: 1, 
- y: 0, 
- filter: 'blur(0px)',
- transition: { duration: 1, type: "spring" as const, bounce: 0.3, delay: index * 0.1 } 
- }
- }}
- initial="hidden"
- whileInView="visible"
- viewport={{ once: true, margin: "-50px" }}
- >
- <div className="flex items-center gap-4 mb-6">
- <div className="w-12 h-12 bg-[#0f172a]/90 rounded-xl shadow-sm flex items-center justify-center border border-amber-900/30 text-amber-200 transition-colors duration-500">
- {category.icon}
- </div>
- <h3 className="font-bold text-amber-200 text-xl tracking-tight transition-colors duration-500">{category.title}</h3>
- </div>
- 
- <div className="flex flex-wrap gap-2.5">
- {category.skills.map((skill, i) => (
- <span key={i} className="text-sm font-semibold bg-[#0f172a]/90 text-amber-200/90 border border-amber-900/30 px-4 py-1.5 rounded-xl shadow-sm transition-colors duration-500">
- {skill}
- </span>
- ))}
- </div>
- </motion.div>
- ))}
- </div>
- </section>
- );
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((category, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white/50 border border-white p-8 rounded-[2rem] flex flex-col h-full"
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white shrink-0">
+                  {category.icon}
+                </div>
+                <h3 className="text-2xl font-black text-black tracking-tight">{category.title}</h3>
+              </div>
+              
+              <div className="flex flex-wrap gap-3 mt-auto">
+                {category.skills.map((skill, i) => (
+                  <span 
+                    key={i} 
+                    className="px-5 py-2.5 bg-black/5 hover:bg-black hover:text-white transition-colors duration-300 rounded-full text-sm font-bold tracking-widest uppercase text-black cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+      </motion.div>
+    </section>
+  );
 };
 
 export default Skills;
