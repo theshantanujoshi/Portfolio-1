@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
         </a>
 
         {/* Center: Links (Hidden on mobile) */}
-        <div className="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest uppercase text-black dark:text-white/50">
+        <div className="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest uppercase text-black dark:text-white/70">
           {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
             <a 
               key={item} 
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
               key={item} 
               href={`#${item.toLowerCase()}`}
               onClick={() => setIsMenuOpen(false)}
-              className="text-black dark:text-white/50 hover:text-black dark:text-white font-bold text-lg tracking-tight uppercase"
+              className="text-black dark:text-white/70 hover:text-black dark:text-white font-bold text-lg tracking-tight uppercase"
             >
               {item}
             </a>

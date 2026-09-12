@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
             <div className="h-1 w-12 bg-black dark:bg-white"></div>
           </div>
           <div className="w-full lg:w-2/3">
-            <p className="text-2xl md:text-3xl font-medium text-black dark:text-white/50 leading-tight tracking-tight">
+            <p className="text-2xl md:text-3xl font-medium text-black dark:text-white/70 leading-tight tracking-tight">
               A comprehensive stack spanning low-level systems programming to high-level machine learning interfaces.
             </p>
           </div>
@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-black dark:bg-white/80 border border-white dark:border-white/ dark:border-black/ p-8 rounded-[2rem] flex flex-col h-full"
+              className="bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-8 rounded-[2rem] flex flex-col h-full"
             >
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center text-white dark:text-black shrink-0">

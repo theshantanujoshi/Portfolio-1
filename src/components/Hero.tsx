@@ -48,16 +48,16 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.8, ease: "linear" }}
           className="mt-20 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-12"
         >
-          <p className="max-w-md text-lg md:text-xl font-medium text-black dark:text-white/50 leading-relaxed text-balance">
+          <p className="max-w-md text-lg md:text-xl font-medium text-black dark:text-white/70 leading-relaxed text-balance">
             AI & Data Science engineering student focused on building intelligent systems and exploring deep technical architecture.
           </p>
 
           <Magnetic intensity={0.4}>
             <a 
               href="#about"
-              className="group flex items-center justify-center w-24 h-24 rounded-full border border-black dark:border-white/ dark:border-black/ hover:border-black dark:border-white hover:bg-black dark:bg-white transition-colors duration-500"
+              className="group flex items-center justify-center w-24 h-24 rounded-full border border-black dark:border-white/10 hover:border-black dark:border-white hover:bg-black dark:bg-white transition-colors duration-500"
             >
-              <ArrowDown size={32} className="text-black dark:text-white group-hover:text-white dark:text-black transition-colors duration-500" />
+              <ArrowDown size={32} className="text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-500" />
             </a>
           </Magnetic>
         </motion.div>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,9 +12,28 @@ import { useTheme } from './contexts/ThemeContext';
 
 function App() {
   const { theme } = useTheme();
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReducedMotion(mediaQuery.matches);
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Lenis smooth scroll logic
   useEffect(() => {
+    if (reducedMotion) return; // Disable Lenis if reduced motion is requested
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -34,7 +53,7 @@ function App() {
       cancelAnimationFrame(animationFrameId);
       lenis.destroy();
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <main className="relative w-full min-h-screen font-sans selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black overflow-x-hidden transition-colors duration-500">
@@ -44,11 +63,11 @@ function App() {
           color1={theme === 'dark' ? '#38bdf8' : '#000000'}
           color2={theme === 'dark' ? '#818cf8' : '#333333'}
           color3={theme === 'dark' ? '#c084fc' : '#666666'}
-          columns={16}
-          rows={10}
+          columns={isMobile ? 8 : 16}
+          rows={isMobile ? 5 : 10}
           barThickness={0.15}
-          speed={0.4}
-          travel={0.8}
+          speed={reducedMotion ? 0 : 0.4}
+          travel={reducedMotion ? 0 : 0.8}
           softness={0.1}
           glow={theme === 'dark' ? 0.5 : 0}
           lightMode={theme !== 'dark'}

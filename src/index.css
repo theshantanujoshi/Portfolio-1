@@ -13,6 +13,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 4px;
+}
+
+.dark *:focus-visible {
+  outline: 2px solid #ffffff;
+}
+
 /* Lenis smooth scrolling defaults */
 html.lenis, html.lenis body {
   height: auto;

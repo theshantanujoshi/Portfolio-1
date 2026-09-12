@@ -29,16 +29,16 @@ const Contact: React.FC = () => {
             Get In Touch
           </h2>
           
-          <p className="text-xl md:text-2xl font-medium text-black dark:text-white/50 leading-relaxed tracking-tight max-w-3xl mb-12 text-balance">
+          <p className="text-xl md:text-2xl font-medium text-black dark:text-white/70 leading-relaxed tracking-tight max-w-3xl mb-12 text-balance">
             Currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-3xl mb-16">
             <Magnetic intensity={0.1}>
-              <a href="mailto:wharshsingh@gmail.com" className="group flex-1 bg-white dark:bg-black dark:bg-white/80 border border-white dark:border-white/ dark:border-black/ p-6 rounded-2xl flex items-center gap-5 hover:bg-white dark:bg-black dark:bg-white hover:shadow-xl transition-all duration-300 w-full cursor-pointer">
-                <Mail size={24} className="text-black dark:text-white/50 shrink-0 group-hover:text-black dark:text-white transition-colors" />
+              <a href="mailto:wharshsingh@gmail.com" className="group flex-1 bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-black hover:shadow-xl transition-all duration-300 w-full cursor-pointer">
+                <Mail size={24} className="text-black dark:text-white/70 shrink-0 group-hover:text-black dark:text-white transition-colors" />
                 <div className="flex flex-col items-start overflow-hidden">
-                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/50 mb-1 group-hover:text-black dark:text-white/50 transition-colors">Personal</span>
+                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/70 mb-1 group-hover:text-black dark:text-white/70 transition-colors">Personal</span>
                   <span className="text-lg md:text-xl font-bold tracking-tight text-black dark:text-white truncate">
                     wharshsingh@gmail.com
                   </span>
@@ -47,10 +47,10 @@ const Contact: React.FC = () => {
             </Magnetic>
 
             <Magnetic intensity={0.1}>
-              <a href="mailto:b24bs1154@iitj.ac.in" className="group flex-1 bg-white dark:bg-black dark:bg-white/80 border border-white dark:border-white/ dark:border-black/ p-6 rounded-2xl flex items-center gap-5 hover:bg-white dark:bg-black dark:bg-white hover:shadow-xl transition-all duration-300 w-full cursor-pointer">
-                <Mail size={24} className="text-black dark:text-white/50 shrink-0 group-hover:text-black dark:text-white transition-colors" />
+              <a href="mailto:b24bs1154@iitj.ac.in" className="group flex-1 bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-black hover:shadow-xl transition-all duration-300 w-full cursor-pointer">
+                <Mail size={24} className="text-black dark:text-white/70 shrink-0 group-hover:text-black dark:text-white transition-colors" />
                 <div className="flex flex-col items-start overflow-hidden">
-                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/50 mb-1 group-hover:text-black dark:text-white/50 transition-colors">College</span>
+                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/70 mb-1 group-hover:text-black dark:text-white/70 transition-colors">College</span>
                   <span className="text-lg md:text-xl font-bold tracking-tight text-black dark:text-white truncate">
                     b24bs1154@iitj.ac.in
                   </span>
@@ -71,10 +71,10 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Footer Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8 pt-12 mt-16 border-t border-black dark:border-white/ dark:border-black/ relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8 pt-12 mt-16 border-t border-black dark:border-white/10 relative z-10">
           <div className="flex items-center gap-3 md:w-1/3 justify-center md:justify-start">
             <img src={`${import.meta.env.BASE_URL}h_logo.png`} alt="Logo" className="w-5 h-5 object-contain" />
-            <p className="text-black dark:text-white/50 text-sm font-bold tracking-widest uppercase whitespace-nowrap">
+            <p className="text-black dark:text-white/70 text-sm font-bold tracking-widest uppercase whitespace-nowrap">
               © 2026. All rights reserved.
             </p>
           </div>
@@ -88,12 +88,12 @@ const Contact: React.FC = () => {
 
           <div className="flex items-center gap-4 md:w-1/3 justify-center md:justify-end">
             <Magnetic intensity={0.3}>
-              <a href="https://github.com/harshsingh07i" target="_blank" rel="noopener noreferrer" className="text-black dark:text-white/50 hover:text-black dark:text-white transition-colors duration-300 p-2">
+              <a href="https://github.com/harshsingh07i" target="_blank" rel="noopener noreferrer" className="text-black dark:text-white/70 hover:text-black dark:text-white transition-colors duration-300 p-2">
                 <Link size={24} />
               </a>
             </Magnetic>
             <Magnetic intensity={0.3}>
-              <a href="https://www.linkedin.com/in/harsh-singh-b89925315/" target="_blank" rel="noopener noreferrer" className="text-black dark:text-white/50 hover:text-black dark:text-white transition-colors duration-300 p-2">
+              <a href="https://www.linkedin.com/in/harsh-singh-b89925315/" target="_blank" rel="noopener noreferrer" className="text-black dark:text-white/70 hover:text-black dark:text-white transition-colors duration-300 p-2">
                 <Link size={24} />
               </a>
             </Magnetic>
@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
         style={{ x: signatureX, scale: signatureScale }}
         className="w-full mt-20 flex justify-center opacity-[0.03] absolute bottom-[5%] left-0 pointer-events-none z-0"
       >
-        <h1 className="text-[25vw] leading-none font-black tracking-tighter text-black dark:text-white uppercase text-center w-full select-none whitespace-nowrap">
+        <h1 className="text-[20vw] md:text-[25vw] leading-none font-black tracking-tighter text-black dark:text-white uppercase text-center w-full select-none whitespace-nowrap">
           HARSH
         </h1>
       </motion.div>

@@ -56,7 +56,7 @@ const Experience: React.FC = () => {
                 )}
 
                 <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 rounded-full bg-white dark:bg-black dark:bg-white/80 border border-white dark:border-white/ dark:border-black/ flex items-center justify-center shrink-0 shadow-sm z-10">
+                  <div className="w-12 h-12 rounded-full bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 flex items-center justify-center shrink-0 shadow-sm z-10">
                     <Briefcase size={20} className="text-black dark:text-white" />
                   </div>
                   
@@ -64,7 +64,7 @@ const Experience: React.FC = () => {
                     <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-4">
                       <div>
                         <h3 className="text-2xl font-black text-black dark:text-white tracking-tight">{exp.role}</h3>
-                        <p className="text-lg font-bold text-black dark:text-white/50 tracking-tight mt-1">{exp.company}</p>
+                        <p className="text-lg font-bold text-black dark:text-white/70 tracking-tight mt-1">{exp.company}</p>
                       </div>
                       <span className="text-xs font-bold tracking-widest uppercase bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-full whitespace-nowrap w-fit">
                         {exp.duration}
@@ -75,7 +75,7 @@ const Experience: React.FC = () => {
                       {exp.description.map((item, i) => (
                         <li key={i} className="flex items-start gap-4">
                           <span className="w-1.5 h-1.5 rounded-full bg-black dark:bg-white/80 mt-2.5 shrink-0"></span>
-                          <span className="text-lg font-medium text-black dark:text-white/50 leading-relaxed text-balance">{item}</span>
+                          <span className="text-lg font-medium text-black dark:text-white/70 leading-relaxed text-balance">{item}</span>
                         </li>
                       ))}
                     </ul>

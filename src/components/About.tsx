@@ -24,27 +24,27 @@ const About: React.FC = () => {
 
           {/* Right: Content */}
           <div className="w-full lg:w-2/3 flex flex-col gap-10">
-            <p className="text-2xl md:text-3xl font-medium text-black dark:text-white/50 leading-tight tracking-tight">
+            <p className="text-2xl md:text-3xl font-medium text-black dark:text-white/70 leading-tight tracking-tight">
               I build and research machine learning architectures, data pipelines, and intelligent interfaces. My goal is to bridge the gap between theoretical AI and production-grade engineering.
             </p>
 
             {/* Education Card */}
-            <div className="bg-white dark:bg-black dark:bg-white/80 border border-white dark:border-white/ dark:border-black/ p-8 rounded-3xl mt-4">
+            <div className="bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-8 rounded-3xl mt-4">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-black dark:bg-white flex items-center justify-center">
                   <GraduationCap className="text-white dark:text-black" size={24} />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl text-black dark:text-white">IIT Jodhpur</h3>
-                  <p className="text-black dark:text-white/50 font-medium">B.Tech AI & Data Science</p>
+                  <p className="text-black dark:text-white/70 font-medium">B.Tech AI & Data Science</p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/80 px-4 py-2 rounded-full text-black dark:text-white/50">
+                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/80 px-4 py-2 rounded-full text-black dark:text-white/70">
                   <Calendar size={16} /> 2024–2028
                 </span>
-                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/80 px-4 py-2 rounded-full text-black dark:text-white/50">
+                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/80 px-4 py-2 rounded-full text-black dark:text-white/70">
                   <MapPin size={16} /> Rajasthan, India
                 </span>
               </div>
