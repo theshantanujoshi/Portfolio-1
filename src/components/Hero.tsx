@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           <Magnetic intensity={0.4}>
             <a 
               href="#about"
-              className="group flex items-center justify-center w-24 h-24 rounded-full border border-black dark:border-white/10 hover:border-black dark:border-white hover:bg-black dark:bg-white transition-colors duration-500"
+              className="group flex items-center justify-center w-24 h-24 rounded-full border border-black dark:border-white/10 hover:border-black dark:hover:border-white hover:bg-black dark:hover:bg-white transition-colors duration-500"
             >
               <ArrowDown size={32} className="text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-500" />
             </a>

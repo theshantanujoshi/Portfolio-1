@@ -70,7 +70,7 @@ const Skills: React.FC = () => {
                 {category.skills.map((skill, i) => (
                   <span 
                     key={i} 
-                    className="px-5 py-2.5 bg-black dark:bg-white/80 hover:bg-black dark:bg-white hover:text-white dark:text-black transition-colors duration-300 rounded-full text-sm font-bold tracking-widest uppercase text-black dark:text-white cursor-default"
+                    className="px-5 py-2.5 bg-black dark:bg-white/80 hover:bg-black dark:hover:bg-white hover:text-white dark:text-black transition-colors duration-300 rounded-full text-sm font-bold tracking-widest uppercase text-black dark:text-white cursor-default"
                   >
                     {skill}
                   </span>

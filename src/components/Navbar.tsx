@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           <a 
             href={`${import.meta.env.BASE_URL}resume.pdf`} 
             download="HARSH_PRATAP_SINGH_Resume.pdf"
-            className="hidden sm:flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black dark:bg-white/80 transition-all hover:scale-105 active:scale-95"
+            className="hidden sm:flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black dark:hover:bg-white/80 transition-all hover:scale-105 active:scale-95"
           >
             <span>Resume</span>
           </a>

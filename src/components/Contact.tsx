@@ -36,9 +36,9 @@ const Contact: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-3xl mb-16">
             <Magnetic intensity={0.1}>
               <a href="mailto:wharshsingh@gmail.com" className="group flex-1 bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-black hover:shadow-xl transition-all duration-300 w-full cursor-pointer">
-                <Mail size={24} className="text-black dark:text-white/70 shrink-0 group-hover:text-black dark:text-white transition-colors" />
+                <Mail size={24} className="text-black dark:text-white/70 shrink-0 group-hover:text-black dark:group-hover:text-white transition-colors" />
                 <div className="flex flex-col items-start overflow-hidden">
-                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/70 mb-1 group-hover:text-black dark:text-white/70 transition-colors">Personal</span>
+                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/70 mb-1 group-hover:text-black dark:group-hover:text-white/70 transition-colors">Personal</span>
                   <span className="text-lg md:text-xl font-bold tracking-tight text-black dark:text-white truncate">
                     wharshsingh@gmail.com
                   </span>
@@ -48,9 +48,9 @@ const Contact: React.FC = () => {
 
             <Magnetic intensity={0.1}>
               <a href="mailto:b24bs1154@iitj.ac.in" className="group flex-1 bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-6 rounded-2xl flex items-center gap-5 hover:bg-white dark:hover:bg-black hover:shadow-xl transition-all duration-300 w-full cursor-pointer">
-                <Mail size={24} className="text-black dark:text-white/70 shrink-0 group-hover:text-black dark:text-white transition-colors" />
+                <Mail size={24} className="text-black dark:text-white/70 shrink-0 group-hover:text-black dark:group-hover:text-white transition-colors" />
                 <div className="flex flex-col items-start overflow-hidden">
-                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/70 mb-1 group-hover:text-black dark:text-white/70 transition-colors">College</span>
+                  <span className="text-[10px] font-black tracking-widest uppercase text-black dark:text-white/70 mb-1 group-hover:text-black dark:group-hover:text-white/70 transition-colors">College</span>
                   <span className="text-lg md:text-xl font-bold tracking-tight text-black dark:text-white truncate">
                     b24bs1154@iitj.ac.in
                   </span>

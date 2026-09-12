@@ -73,10 +73,11 @@ const Projects: React.FC = () => {
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative flex flex-col justify-between bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-8 md:p-12 rounded-[2rem] hover:bg-black dark:bg-white transition-colors duration-500 min-h-[300px] h-full"
+                    style={{ transformStyle: "preserve-3d" }}
+                    className="group relative flex flex-col justify-between bg-white/40 dark:bg-black/40 border border-white dark:border-white/10 p-8 md:p-12 rounded-[2rem] hover:bg-black dark:hover:bg-white transition-colors duration-500 min-h-[300px] h-full"
                   >
-                    <div className="absolute top-8 right-8 w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center group-hover:bg-white dark:group-hover:bg-black transition-colors duration-500">
-                      <ArrowUpRight size={24} className="text-white dark:text-black group-hover:text-black dark:text-white transition-colors duration-500" />
+                    <div style={{ transform: "translateZ(40px)" }} className="absolute top-8 right-8 w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center group-hover:bg-white dark:group-hover:bg-black transition-colors duration-500">
+                      <ArrowUpRight size={24} className="text-white dark:text-black group-hover:text-black dark:group-hover:text-white transition-colors duration-500" />
                     </div>
 
                     <div style={{ transform: "translateZ(30px)" }}>
