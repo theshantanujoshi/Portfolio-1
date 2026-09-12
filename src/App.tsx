@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <main className="relative w-full min-h-screen bg-white dark:bg-black font-sans selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black overflow-x-hidden transition-colors duration-500">
+    <main className="relative w-full min-h-screen font-sans selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black overflow-x-hidden transition-colors duration-500">
       {/* Ghost Fibers Background */}
       <div className="fixed inset-0 -z-10 bg-white dark:bg-black transition-colors duration-500">
         <GhostFibers
