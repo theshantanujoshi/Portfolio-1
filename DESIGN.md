@@ -1,41 +1,43 @@
 ---
 name: Harsh Pratap Portfolio
-description: An intelligent, data-driven personal portfolio.
+description: An intelligent, data-driven personal portfolio with a dynamic slate fluid background.
 colors:
   primary: "#5E6470"
   background: "#f0f0f0"
-  surface: "rgba(255, 255, 255, 0.5)"
-  border: "#e5e7eb"
+  surface: "rgba(255, 255, 255, 0.7)"
+  border: "rgba(255, 255, 255, 0.4)"
 typography:
   display:
     fontFamily: '"Inter", sans-serif'
-    fontWeight: 600
+    fontWeight: 700
   headline:
     fontFamily: '"Inter", sans-serif'
-    fontWeight: 600
+    fontWeight: 700
   body:
     fontFamily: '"Inter", sans-serif'
-    fontWeight: 400
+    fontWeight: 500
 rounded:
   md: "12px"
   lg: "16px"
   xl: "24px"
   2xl: "32px"
+  3xl: "40px"
   full: "9999px"
 spacing:
   md: "16px"
   lg: "24px"
   xl: "32px"
+  2xl: "48px"
 components:
   button-primary:
     backgroundColor: "{colors.primary}"
     textColor: "#ffffff"
-    rounded: "{rounded.md}"
-    padding: "16px 32px"
+    rounded: "{rounded.lg}"
+    padding: "20px 40px"
   card:
     backgroundColor: "{colors.surface}"
-    rounded: "{rounded.xl}"
-    padding: "24px 32px"
+    rounded: "{rounded.3xl}"
+    padding: "32px 48px"
 ---
 
 # Design System: Harsh Pratap Portfolio
@@ -44,91 +46,90 @@ components:
 
 **Creative North Star: "The Intelligent Slate"**
 
-This system embraces a technical, analytical, and data-driven aesthetic. It prioritizes structure and clarity, utilizing a monotonous, restrained color palette to keep the focus on content and achievements. The design is layered and tactile, employing subtle glassmorphic surfaces, soft shadows, and gentle hover movements to create an interactive experience that feels responsive and polished.
+This system embraces a technical, analytical, and data-driven aesthetic anchored by a dynamic, iridescent slate fluid background. It prioritizes structure and clarity through massive, heavily tracked typography and extremely thick glassmorphism. The design is profoundly tactile, employing heavy drop shadows and exaggerated hover lifts (`-translate-y-2`) to create an interactive experience that feels substantial, polished, and decisive.
 
 **Key Characteristics:**
-- Monotonous and restrained color palette.
-- Layered, tactile surfaces with glassmorphism.
-- Large, friendly border radii contrasting with technical typography.
-- Smooth, physics-based motion on interactions.
+- Monotonous, technical slate palette.
+- Expansive, thick glassmorphic surfaces (`backdrop-blur-2xl`, `bg-white/70`).
+- Massive display typography (`text-9xl`) with tight tracking.
+- Heavy, physics-based motion and deep shadows (`shadow-xl`).
+- A globally interactive, iridescent slate fluid background.
 
 ## Colors
 
-A monotonous and restrained scheme that relies on contrast and transparency rather than vibrant hues.
+A restrained scheme relying entirely on contrast, opacity, and thick glass rather than vibrant hues.
 
 ### Primary
-- **Technical Slate** (#5E6470): The primary accent color in light mode, used for buttons, icons, and key text emphasis. In dark mode, this inverts to solid White (#ffffff).
+- **Technical Slate** (#5E6470): The primary accent color and the base color for the dynamic shader background (`[0.37, 0.39, 0.44]`). It serves as the brand's core identity.
 
 ### Neutral
-- **Background Light** (#f0f0f0): The main canvas color for light mode.
-- **Background Dark** (#080808): The main canvas color for dark mode.
-- **Glass Surface** (rgba(255,255,255,0.5)): The translucent background used for cards and floating elements.
-- **Subtle Border** (#e5e7eb): Used to define structural boundaries on light surfaces.
+- **Thick Glass Surface** (rgba(255,255,255,0.7)): High-opacity translucent backgrounds used for all structural cards to stand out against the fluid background.
+- **Structural Border** (rgba(255,255,255,0.4)): Pronounced borders that define boundaries on glass surfaces.
 
-**The Monotonous Rule.** Stick to the grayscale and slate spectrum. Avoid introducing new vibrant accent colors; use opacity and contrast to create visual hierarchy.
+**The Monotonous Rule.** Stick to the grayscale and slate spectrum. Let the iridescent shader and thick glass create visual hierarchy instead of introducing new hues.
 
 ## Typography
 
 **Display Font:** Inter (with sans-serif)
 **Body Font:** Inter (with sans-serif)
 
-**Character:** Clean, highly legible, and objective. Inter provides a technical yet accessible voice suitable for data science and engineering contexts.
+**Character:** Bold, massive, and highly legible. The typography scale is pushed to its absolute limits for structural impact.
 
 ### Hierarchy
-- **Display** (600, clamp(2.5rem, ...)): Used exclusively for the hero section name.
-- **Headline** (600, text-3xl): Used for major section titles (e.g., "About Me", "Experience").
-- **Title** (600, text-xl): Used for project titles and role designations.
-- **Body** (400, text-base): Used for descriptions, about text, and general reading.
-- **Label** (500, text-sm): Used for chips, tags, and secondary metadata.
+- **Display** (700, text-9xl, tracking-tighter): Used for the main hero name.
+- **Headline** (700, text-4xl/5xl, tracking-tighter): Used for major section titles.
+- **Title** (700, text-2xl/3xl, tracking-tight): Used for project titles and role designations.
+- **Body** (500, text-lg/xl): Thick, medium-weight body text for descriptions.
+- **Label** (600, text-sm, tracking-widest, uppercase): Used for chips, meta tags, and section kickers.
 
 ## Layout
 
-The layout is structured around a central max-width container (`max-w-[1400px]`). Sections are stacked vertically with generous vertical rhythm (`py-16` or `py-24`). Content within sections often uses CSS Grid or Flexbox to manage side-by-side details (like the 3-column footer).
+The layout is structured around a central max-width container (`max-w-[1400px]`). Sections are stacked vertically with generous vertical rhythm (`py-10` to `mb-16`). The `Hero` acts as a transparent window revealing the background, while subsequent sections use heavy glass cards.
 
 ## Elevation & Depth
 
-The system uses a layered and tactile philosophy, combining translucent glassmorphic backgrounds with subtle drop shadows to lift elements off the canvas.
+The system uses a profoundly tactile philosophy, lifting thick glass cards high off the fluid background.
 
 ### Shadow Vocabulary
-- **Rest** (`shadow-sm`): Applied to cards and buttons by default to establish their distinct layer.
-- **Hover** (`shadow-md`, `-translate-y-1`): Used to indicate interactivity on cards and project tiles.
+- **Rest** (`shadow-md`): Applied to cards and buttons to establish strong baseline elevation.
+- **Hover** (`shadow-xl`, `-translate-y-2`): Exaggerated lift indicating high interactivity and physical weight.
 
-**The Tactile Lift Rule.** Elements that can be interacted with should respond physically. When hovered, cards and buttons should lift slightly (`-translate-y-1`) and increase their shadow spread.
+**The Tactile Lift Rule.** Interactive elements must possess physical weight. When hovered, large cards lift dramatically (`-translate-y-2`) and cast a deep `shadow-xl`.
 
 ## Shapes
 
-The form language is characterized by extremely rounded, soft corners that offset the technical typography.
+The form language pairs aggressive typography with exceedingly soft, friendly structural shapes.
 
-- **Main Sections/Wrappers:** 32px (`rounded-[2rem]`)
-- **Cards:** 24px (`rounded-[1.5rem]`)
-- **Buttons & Small Containers:** 12px (`rounded-xl`)
+- **Main Sections/Wrappers:** 40px (`rounded-[2.5rem]`)
+- **Cards:** 32px (`rounded-[2rem]`)
+- **Buttons & Small Containers:** 16px (`rounded-2xl`)
 - **Chips & Profiles:** Fully rounded (`rounded-full`)
 
 ## Components
 
 ### Buttons
-- **Shape:** Soft rectangle (12px radius, `rounded-xl`).
-- **Primary:** Technical Slate (#5E6470) background with white text (Light Mode) or White background with black text (Dark Mode).
-- **Hover:** Darkens to black (Light Mode) or lightens to gray-200 (Dark Mode), with increased shadow.
+- **Shape:** Soft rectangle (16px radius, `rounded-2xl`).
+- **Primary:** Technical Slate (#5E6470) or true Black (#000000) background with bold white text. 
+- **Hover:** Significant lift (`-translate-y-1`) and `shadow-xl`.
 
 ### Cards
-- **Corner Style:** Large (24px radius, `rounded-[1.5rem]`).
-- **Background:** Translucent glass (white/50 in light, white/5 in dark) with background blur (`backdrop-blur-md`).
-- **Border:** Delicate 1px solid border (#e5e7eb or white/10).
-- **Shadow Strategy:** Rests at `shadow-sm`, lifts to `shadow-md` on hover.
+- **Corner Style:** Extra Large (32px - 40px radius).
+- **Background:** Thick glass (`white/70` in light, `white/10` in dark) with aggressive background blur (`backdrop-blur-2xl`).
+- **Border:** Pronounced translucent border (`white/40` or `white/60`).
+- **Shadow Strategy:** Rests at `shadow-md`, lifts to `shadow-xl` and `-translate-y-2` on hover.
 
 ### Chips / Tags
-- **Style:** Small text (text-xs or text-sm), fully rounded or 12px radius, translucent background with a subtle border.
+- **Style:** Small, bold text (`text-sm font-semibold`), fully rounded or 16px radius, translucent background (`white/80`) with a visible border.
 - **State:** Static, used for displaying tech stacks and skills.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** use large border radii (24px - 32px) for structural containers to maintain the approachable feel.
-- **Do** apply `backdrop-blur-md` and semi-transparent backgrounds to cards to create depth against the solid background.
-- **Do** ensure physical, tactile transitions on interactive elements (e.g., `-translate-y-1` on hover).
+- **Do** use massive border radii (32px - 40px) to balance the aggressive typography.
+- **Do** apply `backdrop-blur-2xl` and `bg-white/70` to create thick, substantial glass against the dynamic background.
+- **Do** exaggerate tactile transitions (`-translate-y-2`, `shadow-xl`).
 
 ### Don't:
-- **Don't** introduce vibrant or saturated colors outside of the monochrome/slate spectrum.
-- **Don't** use sharp, 0px border radii on structural elements.
-- **Don't** use solid, opaque backgrounds for cards; always retain a degree of glassmorphism.
+- **Don't** revert to flat colors; allow the global Iridescence shader to define the canvas.
+- **Don't** use thin or standard typography; keep headings at `font-bold` and `tracking-tighter`.
+- **Don't** use subtle shadows (`shadow-sm`) for structural cards; they must feel heavy.

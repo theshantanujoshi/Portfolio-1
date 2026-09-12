@@ -32,10 +32,10 @@ function App() {
   }, []);
 
   return (
-    <main className="relative w-full min-h-screen bg-transparent font-sans selection:bg-[#5E6470] dark:selection:bg-white selection:text-white dark:selection:text-black transition-colors duration-500">
+    <main className="relative w-full min-h-screen bg-transparent font-sans selection:bg-blue-600 dark:selection:bg-white selection:text-white dark:selection:text-black transition-colors duration-500">
       <div className="fixed inset-0 -z-10 bg-[#f0f0f0] dark:bg-[#080808]">
         <Iridescence
-          color={[0.37, 0.39, 0.44]}
+          color={[0.15, 0.39, 0.92]}
           mouseReact={true}
           amplitude={0.1}
           speed={0.5}

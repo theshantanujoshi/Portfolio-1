@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-12T16:55:00Z",
+  "generatedAt": "2026-09-12T17:10:00Z",
   "title": "Design System: Harsh Pratap Portfolio",
   "extensions": {
     "colorMeta": {
@@ -12,34 +12,34 @@
       },
       "background": {
         "role": "neutral",
-        "displayName": "Background Light",
-        "canonical": "#f0f0f0",
-        "tonalRamp": ["#111111", "#333333", "#555555", "#777777", "#999999", "#BBBBBB", "#DDDDDD", "#f0f0f0"]
+        "displayName": "Shader Canvas",
+        "canonical": "Iridescence [0.37, 0.39, 0.44]",
+        "tonalRamp": []
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero headlines only."
+        "purpose": "Massive hero headlines (text-9xl, tracking-tighter)."
       }
     },
     "shadows": [
       {
-        "name": "shadow-sm",
-        "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-        "purpose": "Default elevation for cards and buttons."
-      },
-      {
         "name": "shadow-md",
         "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-        "purpose": "Hover elevation for interactive elements."
+        "purpose": "Default heavy elevation for thick glass cards."
+      },
+      {
+        "name": "shadow-xl",
+        "value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+        "purpose": "Hover elevation for extreme tactile lift."
       }
     ],
     "motion": [
       {
         "name": "transition-all duration-500",
         "value": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-        "purpose": "Standard physics for cards lifting on hover."
+        "purpose": "Standard physics for cards lifting on hover (-translate-y-2)."
       }
     ]
   },
@@ -48,57 +48,58 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Used for main calls to action like 'Resume' or 'Contact'.",
-      "html": "<button class=\"ds-btn-primary\">GET IN TOUCH</button>",
-      "css": ".ds-btn-primary { background: #5E6470; color: #ffffff; padding: 16px 32px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 16px; border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.05); } .ds-btn-primary:hover { background: #000000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transform: translateY(-2px); }"
+      "description": "Used for main calls to action like 'Say Hello'.",
+      "html": "<button class=\"ds-btn-primary\">SAY HELLO</button>",
+      "css": ".ds-btn-primary { background: #5E6470; color: #ffffff; padding: 20px 40px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 18px; border: none; border-radius: 16px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); } .ds-btn-primary:hover { background: #000000; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transform: translateY(-4px); }"
     },
     {
-      "name": "Glass Card",
+      "name": "Thick Glass Card",
       "kind": "card",
       "refersTo": "card",
-      "description": "Standard container for projects, experiences, and skills.",
-      "html": "<div class=\"ds-card\"><h3 style=\"margin:0 0 8px;font-family:'Inter',sans-serif;font-weight:600;\">Card Title</h3><p style=\"margin:0;font-family:'Inter',sans-serif;font-size:14px;color:#5E6470;\">A brief description of the content inside the card.</p></div>",
-      "css": ".ds-card { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid #e5e7eb; border-radius: 24px; padding: 24px 32px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.5s ease; cursor: pointer; } .ds-card:hover { box-shadow: 0 4px 6px rgba(0,0,0,0.1); transform: translateY(-4px); }"
+      "description": "Standard heavy container for projects and experiences.",
+      "html": "<div class=\"ds-card\"><h3 style=\"margin:0 0 16px;font-family:'Inter',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.025em;\">Card Title</h3><p style=\"margin:0;font-family:'Inter',sans-serif;font-size:18px;font-weight:500;color:#5E6470;\">A brief description of the heavy content inside the glass card.</p></div>",
+      "css": ".ds-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 40px; padding: 32px 48px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: all 0.5s ease; cursor: pointer; } .ds-card:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transform: translateY(-8px); }"
     },
     {
       "name": "Skill Chip",
       "kind": "chip",
       "refersTo": "chip",
-      "description": "Displays small tags like skills or tech stack.",
+      "description": "Displays small bold tags like skills or tech stack.",
       "html": "<span class=\"ds-chip\">React.js</span>",
-      "css": ".ds-chip { display: inline-block; background: #ffffff; color: #5E6470; border: 1px solid #e5e7eb; border-radius: 9999px; padding: 4px 12px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }"
+      "css": ".ds-chip { display: inline-block; background: rgba(255,255,255,0.8); color: #5E6470; border: 1px solid rgba(255,255,255,0.6); border-radius: 12px; padding: 6px 16px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }"
     }
   ],
   "narrative": {
     "northStar": "The Intelligent Slate",
-    "overview": "This system embraces a technical, analytical, and data-driven aesthetic. It prioritizes structure and clarity, utilizing a monotonous, restrained color palette to keep the focus on content and achievements. The design is layered and tactile, employing subtle glassmorphic surfaces, soft shadows, and gentle hover movements to create an interactive experience that feels responsive and polished.",
+    "overview": "This system embraces a technical, analytical, and data-driven aesthetic anchored by a dynamic, iridescent slate fluid background. It prioritizes structure and clarity through massive, heavily tracked typography and extremely thick glassmorphism. The design is profoundly tactile, employing heavy drop shadows and exaggerated hover lifts (-translate-y-2) to create an interactive experience that feels substantial, polished, and decisive.",
     "keyCharacteristics": [
-      "Monotonous and restrained color palette.",
-      "Layered, tactile surfaces with glassmorphism.",
-      "Large, friendly border radii contrasting with technical typography.",
-      "Smooth, physics-based motion on interactions."
+      "Monotonous, technical slate palette.",
+      "Expansive, thick glassmorphic surfaces (backdrop-blur-2xl, bg-white/70).",
+      "Massive display typography (text-9xl) with tight tracking.",
+      "Heavy, physics-based motion and deep shadows (shadow-xl).",
+      "A globally interactive, iridescent slate fluid background."
     ],
     "rules": [
       {
         "name": "The Monotonous Rule",
-        "body": "Stick to the grayscale and slate spectrum. Avoid introducing new vibrant accent colors; use opacity and contrast to create visual hierarchy.",
+        "body": "Stick to the grayscale and slate spectrum. Let the iridescent shader and thick glass create visual hierarchy instead of introducing new hues.",
         "section": "colors"
       },
       {
         "name": "The Tactile Lift Rule",
-        "body": "Elements that can be interacted with should respond physically. When hovered, cards and buttons should lift slightly (-translate-y-1) and increase their shadow spread.",
+        "body": "Interactive elements must possess physical weight. When hovered, large cards lift dramatically (-translate-y-2) and cast a deep shadow-xl.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do use large border radii (24px - 32px) for structural containers to maintain the approachable feel.",
-      "Do apply backdrop-blur-md and semi-transparent backgrounds to cards to create depth against the solid background.",
-      "Do ensure physical, tactile transitions on interactive elements (e.g., -translate-y-1 on hover)."
+      "Do use massive border radii (32px - 40px) to balance the aggressive typography.",
+      "Do apply backdrop-blur-2xl and bg-white/70 to create thick, substantial glass against the dynamic background.",
+      "Do exaggerate tactile transitions (-translate-y-2, shadow-xl)."
     ],
     "donts": [
-      "Don't introduce vibrant or saturated colors outside of the monochrome/slate spectrum.",
-      "Don't use sharp, 0px border radii on structural elements.",
-      "Don't use solid, opaque backgrounds for cards; always retain a degree of glassmorphism."
+      "Don't revert to flat colors; allow the global Iridescence shader to define the canvas.",
+      "Don't use thin or standard typography; keep headings at font-bold and tracking-tighter.",
+      "Don't use subtle shadows (shadow-sm) for structural cards; they must feel heavy."
     ]
   }
 }
