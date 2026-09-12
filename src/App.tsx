@@ -6,7 +6,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import GhostFibers from './components/GhostFibers';
+import SlicedWaves from './components/SlicedWaves';
 import Lenis from 'lenis';
 import { useTheme } from './contexts/ThemeContext';
 
@@ -38,17 +38,21 @@ function App() {
 
   return (
     <main className="relative w-full min-h-screen font-sans selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black overflow-x-hidden transition-colors duration-500">
-      {/* Ghost Fibers Background */}
+      {/* Sliced Waves Background */}
       <div className="fixed inset-0 -z-10 bg-white dark:bg-black transition-colors duration-500">
-        <GhostFibers
-          lineColor={theme === 'dark' ? '#ffffff' : '#000000'}
-          glowColor={theme === 'dark' ? '#f8fafc' : '#0f172a'}
+        <SlicedWaves
+          color1={theme === 'dark' ? '#38bdf8' : '#000000'}
+          color2={theme === 'dark' ? '#818cf8' : '#333333'}
+          color3={theme === 'dark' ? '#c084fc' : '#666666'}
+          columns={16}
+          rows={10}
+          barThickness={0.15}
           speed={0.4}
-          scale={2.5}
-          layers={6}
+          travel={0.8}
+          softness={0.1}
+          glow={theme === 'dark' ? 0.5 : 0}
           lightMode={theme !== 'dark'}
-          vignette={0.5}
-          glowIntensity={3.0}
+          opacity={theme === 'dark' ? 0.6 : 0.8}
         />
       </div>
 
