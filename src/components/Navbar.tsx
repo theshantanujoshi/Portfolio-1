@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
             className="p-2 text-black dark:text-white hover:opacity-70 transition-colors"
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            {theme === 'dark' ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
           </button>
 
           <a 
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
             className="md:hidden p-2 text-black dark:text-white hover:opacity-70 transition-colors"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
           </button>
         </div>
       </div>
@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
             onClick={() => setIsMenuOpen(false)}
             className="flex items-center justify-center gap-2 bg-black dark:bg-white text-white dark:text-black px-5 py-4 rounded-2xl text-sm font-bold uppercase tracking-widest mt-2"
           >
-            <Download size={16} />
+            <Download size={16} strokeWidth={1.5} />
             <span>Download Resume</span>
           </a>
         </motion.div>

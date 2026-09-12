@@ -72,32 +72,36 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <section id="projects" className="w-full">
-      <motion.div 
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="glass-panel rounded-[3rem] p-10 md:p-20 overflow-hidden relative"
-      >
-        
-        <div className="flex flex-col lg:flex-row gap-16 items-start mb-16">
-          <div className="w-full lg:w-1/3">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black dark:text-white uppercase mb-4">
-              Deployed<br/>Systems
-            </h2>
-            <div className="h-1 w-12 bg-black dark:bg-white"></div>
+    <section id="projects" className="w-full relative py-32 border-t border-black/10 dark:border-white/10">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-1 md:grid-cols-12 gap-12"
+        >
+          {/* Left: Architectural Label */}
+          <div className="md:col-span-4 flex flex-col justify-between">
+            <div>
+              <span className="text-xs font-mono font-bold tracking-widest uppercase text-black/40 dark:text-white/40 mb-4 block">
+                [ 03 — SYSTEMS ]
+              </span>
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-black dark:text-white uppercase mb-4 leading-none">
+                Deployed<br/>Systems
+              </h2>
+            </div>
           </div>
-          <div className="w-full lg:w-2/3">
-            <p className="text-2xl md:text-3xl font-medium text-black dark:text-white/70 leading-tight tracking-tight">
+
+          {/* Right: Content Grid */}
+          <div className="md:col-span-8 flex flex-col gap-12">
+            <p className="text-3xl md:text-5xl font-medium text-black dark:text-white/90 leading-[1.1] tracking-tighter text-balance">
               A collection of architectural experiments, data pipelines, and machine learning models pulled directly from production telemetry.
             </p>
-          </div>
-        </div>
 
-        {loading ? (
-          <TerminalLoader />
-        ) : (
+            {loading ? (
+              <TerminalLoader />
+            ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 [perspective:1000px]">
             {repos.map((repo, i) => (
               <motion.div
@@ -148,8 +152,9 @@ const Projects: React.FC = () => {
             ))}
           </div>
         )}
-
-      </motion.div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };
