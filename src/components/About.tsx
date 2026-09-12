@@ -41,10 +41,10 @@ const About: React.FC = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/80 px-4 py-2 rounded-full text-black dark:text-white/70">
-                  <Calendar size={16} /> 2024–2028
+                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/90 px-4 py-2 rounded-full text-white dark:text-black shadow-sm">
+                  <Calendar size={16} /> 2024-2028
                 </span>
-                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/80 px-4 py-2 rounded-full text-black dark:text-white/70">
+                <span className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase bg-black dark:bg-white/90 px-4 py-2 rounded-full text-white dark:text-black shadow-sm">
                   <MapPin size={16} /> Rajasthan, India
                 </span>
               </div>
