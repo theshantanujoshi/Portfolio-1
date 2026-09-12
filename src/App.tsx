@@ -38,13 +38,14 @@ function App() {
       {/* Ghost Fibers Background */}
       <div className="fixed inset-0 -z-10 bg-white">
         <GhostFibers
-          lineColor="#94a3b8"
-          glowColor="#e2e8f0"
-          speed={0.3}
+          lineColor="#000000"
+          glowColor="#0f172a"
+          speed={0.4}
           scale={2.5}
           layers={6}
           lightMode={true}
-          vignette={0.4}
+          vignette={0.5}
+          glowIntensity={3.0}
         />
       </div>
 
