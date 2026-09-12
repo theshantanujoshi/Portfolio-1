@@ -7,8 +7,10 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Iridescence from './components/Iridescence';
+import Lenis from 'lenis';
 
 function App() {
+  // Connection lost title logic
   useEffect(() => {
     let originalTitle = document.title;
     let timeoutId: ReturnType<typeof setTimeout>;
@@ -28,6 +30,29 @@ function App() {
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       clearTimeout(timeoutId);
+    };
+  }, []);
+
+  // Lenis smooth scroll logic
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    let animationFrameId: number;
+    
+    function raf(time: number) {
+      lenis.raf(time);
+      animationFrameId = requestAnimationFrame(raf);
+    }
+
+    animationFrameId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      lenis.destroy();
     };
   }, []);
 
