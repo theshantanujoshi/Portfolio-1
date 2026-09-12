@@ -36,15 +36,15 @@ const Skills: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <h2 className="text-4xl font-bold text-slate-900 dark:text-white tracking-tighter transition-colors duration-500">Technical Skills</h2>
-        <div className="h-1.5 w-16 bg-blue-600 dark:bg-white rounded-full mt-6 opacity-80 dark:opacity-60 transition-colors duration-500"></div>
+        <h2 className="text-4xl font-bold text-amber-500 text-amber-100 tracking-tighter transition-colors duration-500">Technical Skills</h2>
+        <div className="h-1.5 w-16 bg-amber-900 dark:bg-white rounded-full mt-6 opacity-80 dark:opacity-60 transition-colors duration-500"></div>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {skillCategories.map((category, index) => (
           <motion.div 
             key={index}
-            className="flex flex-col bg-white/70 dark:bg-white/10 backdrop-blur-2xl border border-white/40 dark:border-white/20 p-8 rounded-[2rem] shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+            className="flex flex-col bg-[#0f172a]/70 backdrop-blur-2xl border border-white/40 dark:border-white/20 p-8 rounded-[2rem] shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
             variants={{
               hidden: { opacity: 0, y: 50, filter: 'blur(10px)' },
               visible: { 
@@ -59,15 +59,15 @@ const Skills: React.FC = () => {
             viewport={{ once: true, margin: "-50px" }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-white/80 dark:bg-black/40 rounded-xl shadow-sm flex items-center justify-center border border-white/60 dark:border-white/20 text-slate-900 dark:text-white transition-colors duration-500">
+              <div className="w-12 h-12 bg-[#0f172a]/90 rounded-xl shadow-sm flex items-center justify-center border border-white/60 dark:border-white/20 text-amber-500 text-amber-100 transition-colors duration-500">
                 {category.icon}
               </div>
-              <h3 className="font-bold text-slate-900 dark:text-white text-xl tracking-tight transition-colors duration-500">{category.title}</h3>
+              <h3 className="font-bold text-amber-500 text-amber-100 text-xl tracking-tight transition-colors duration-500">{category.title}</h3>
             </div>
             
             <div className="flex flex-wrap gap-2.5">
               {category.skills.map((skill, i) => (
-                <span key={i} className="text-sm font-semibold bg-white/80 dark:bg-black/50 text-slate-900 dark:text-gray-200 border border-white/60 dark:border-white/20 px-4 py-1.5 rounded-xl shadow-sm transition-colors duration-500">
+                <span key={i} className="text-sm font-semibold bg-[#0f172a]/90 text-amber-500 text-blue-200 border border-white/60 dark:border-white/20 px-4 py-1.5 rounded-xl shadow-sm transition-colors duration-500">
                   {skill}
                 </span>
               ))}

@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 const Hero: React.FC = () => {
   return (
     <div className="w-full min-h-[85vh] flex items-center justify-center p-4 md:p-6 bg-transparent transition-colors duration-500">
-      <section className="relative w-full max-w-[1400px] min-h-[75vh] rounded-[2rem] overflow-hidden flex flex-col items-center bg-white/10 dark:bg-black/20 backdrop-blur-xl shadow-sm border border-white/20 dark:border-white/10 transition-colors duration-500">
+      <section className="relative w-full max-w-[1400px] min-h-[75vh] rounded-[2rem] overflow-hidden flex flex-col items-center bg-[#0f172a]/40 backdrop-blur-xl shadow-sm border border-white/20 dark:border-white/10 transition-colors duration-500">
         
         {/* Clean Glass Layer to reveal Iridescence */}
         <div className="absolute inset-0 z-0 bg-black/20 dark:bg-black/40 transition-colors duration-500 rounded-[2rem]"></div>
@@ -15,7 +15,8 @@ const Hero: React.FC = () => {
           <div className="max-w-4xl flex flex-col items-center">
             {/* Heading */}
             <motion.h1
-              className="text-5xl sm:text-6xl md:text-8xl lg:text-[7.5rem] font-bold text-white leading-[0.95] mb-6 tracking-tighter drop-shadow-xl"
+              className="glitch-effect text-5xl sm:text-6xl md:text-8xl lg:text-[7.5rem] font-bold text-amber-100 leading-[0.95] mb-6 tracking-tighter drop-shadow-xl"
+              data-text="Harsh Pratap Singh"
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -25,7 +26,7 @@ const Hero: React.FC = () => {
 
             {/* Paragraph */}
             <motion.p
-              className="text-lg sm:text-xl md:text-2xl text-white/95 max-w-2xl leading-relaxed drop-shadow-md font-medium tracking-tight"
+              className="text-lg sm:text-xl md:text-2xl text-amber-100/95 max-w-2xl leading-relaxed drop-shadow-md font-medium tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
