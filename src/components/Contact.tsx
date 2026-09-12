@@ -16,13 +16,13 @@ const Contact: React.FC = () => {
   const signatureScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
   return (
-    <section id="contact" ref={containerRef} className="w-full pb-32">
+    <section id="contact" ref={containerRef} className="relative w-full pb-32 overflow-hidden flex justify-center">
       <motion.div 
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="glass-panel rounded-[3rem] p-10 md:p-16 relative overflow-hidden max-w-5xl mx-auto flex flex-col items-center text-center"
+        className="glass-panel rounded-[3rem] p-10 md:p-16 relative overflow-hidden w-full max-w-5xl mx-auto flex flex-col items-center text-center z-10"
       >
         <div className="relative z-10 flex flex-col items-center w-full">
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-black uppercase mb-6">
@@ -99,16 +99,16 @@ const Contact: React.FC = () => {
             </Magnetic>
           </div>
         </div>
-        
-        {/* Massive Parallax Overlay */}
-        <motion.div 
-          style={{ x: signatureX, scale: signatureScale }}
-          className="w-full mt-20 flex justify-center opacity-[0.03] absolute bottom-[-5%] left-0 pointer-events-none"
-        >
-          <h1 className="text-[25vw] leading-none font-black tracking-tighter text-black uppercase text-center w-full overflow-hidden select-none whitespace-nowrap">
-            HARSH
-          </h1>
-        </motion.div>
+      </motion.div>
+
+      {/* Massive Parallax Overlay - Moved outside glass panel so it doesn't get clipped */}
+      <motion.div 
+        style={{ x: signatureX, scale: signatureScale }}
+        className="w-full mt-20 flex justify-center opacity-[0.03] absolute bottom-[5%] left-0 pointer-events-none z-0"
+      >
+        <h1 className="text-[25vw] leading-none font-black tracking-tighter text-black uppercase text-center w-full select-none whitespace-nowrap">
+          HARSH
+        </h1>
       </motion.div>
     </section>
   );
