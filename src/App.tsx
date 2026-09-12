@@ -6,7 +6,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import Iridescence from './components/Iridescence';
+import GhostFibers from './components/GhostFibers';
 import Lenis from 'lenis';
 
 function App() {
@@ -35,13 +35,16 @@ function App() {
 
   return (
     <main className="relative w-full min-h-screen bg-white font-sans selection:bg-black selection:text-white overflow-x-hidden">
-      {/* Liquid Silver Background */}
-      <div className="fixed inset-0 -z-10 bg-[#f8f9fa]">
-        <Iridescence
-          color={[0.95, 0.96, 0.98]}
-          mouseReact={true}
-          amplitude={0.3}
-          speed={0.8}
+      {/* Ghost Fibers Background */}
+      <div className="fixed inset-0 -z-10 bg-white">
+        <GhostFibers
+          lineColor="#94a3b8"
+          glowColor="#e2e8f0"
+          speed={0.3}
+          scale={2.5}
+          layers={6}
+          lightMode={true}
+          vignette={0.4}
         />
       </div>
 
