@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`}
-              className="text-amber-500 text-blue-300 hover:text-black dark:hover:text-amber-100 transition-colors"
+              className="text-amber-200 text-amber-200/70 hover:text-black dark:hover:text-amber-100 transition-colors"
             >
               {item}
             </a>
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-4">
           <button 
             onClick={toggleTheme}
-            className="p-3 rounded-2xl bg-white/80 dark:bg-black/60 text-amber-500 text-amber-100 hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-sm border border-white/60 dark:border-white/20"
+            className="p-3 rounded-2xl bg-white/80 dark:bg-black/60 text-amber-200 text-amber-100 hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-sm border border-white/60 dark:border-white/20"
             aria-label="Toggle theme"
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-xl bg-[#0f172a]/70 text-amber-500 text-blue-300 hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-sm"
+            className="md:hidden p-2 rounded-xl bg-[#0f172a]/70 text-amber-200 text-amber-200/70 hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-sm"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
               key={item} 
               href={`#${item.toLowerCase()}`}
               onClick={() => setIsMenuOpen(false)}
-              className="text-amber-500 text-blue-300 hover:text-black dark:hover:text-amber-100 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+              className="text-amber-200 text-amber-200/70 hover:text-black dark:hover:text-amber-100 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
             >
               {item}
             </a>

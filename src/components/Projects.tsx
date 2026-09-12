@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <h2 className="text-4xl font-bold text-amber-500 text-amber-100 tracking-tighter transition-colors duration-500">Projects & Hackathons</h2>
+        <h2 className="text-4xl font-bold text-amber-200 text-amber-100 tracking-tighter transition-colors duration-500">Projects & Hackathons</h2>
         <div className="h-1.5 w-16 bg-amber-900 dark:bg-white rounded-full mt-6 opacity-80 dark:opacity-60 transition-colors duration-500"></div>
       </motion.div>
 
@@ -100,19 +100,19 @@ const Projects: React.FC = () => {
           >
             <div className="flex justify-between items-center mb-8">
               <div className="w-14 h-14 bg-[#0f172a]/90 rounded-xl shadow-sm flex items-center justify-center border border-white/60 dark:border-white/20 transition-colors duration-500">
-                <FolderOpen className="text-amber-500 text-amber-100 transition-colors duration-500" size={26} />
+                <FolderOpen className="text-amber-200 text-amber-100 transition-colors duration-500" size={26} />
               </div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-amber-500 text-amber-100 opacity-70 hover:opacity-100 hover:scale-110 transition-all p-2">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-amber-200 text-amber-100 opacity-70 hover:opacity-100 hover:scale-110 transition-all p-2">
                 {project.icon}
               </a>
             </div>
             
-            <h3 className="text-2xl font-bold text-amber-500 text-amber-100 mb-4 tracking-tight transition-colors duration-500">{project.title}</h3>
-            <p className="text-lg text-amber-500 text-blue-300 opacity-95 mb-8 flex-grow leading-relaxed font-medium transition-colors duration-500">{project.description}</p>
+            <h3 className="text-2xl font-bold text-amber-200 text-amber-100 mb-4 tracking-tight transition-colors duration-500">{project.title}</h3>
+            <p className="text-lg text-amber-200 text-amber-200/70 opacity-95 mb-8 flex-grow leading-relaxed font-medium transition-colors duration-500">{project.description}</p>
             
             <div className="flex flex-wrap gap-2.5 mt-auto">
               {project.tags.map((tag, i) => (
-                <span key={i} className="text-sm font-semibold bg-[#0f172a]/90 text-amber-500 text-blue-200 border border-white/60 dark:border-white/20 px-4 py-1.5 rounded-xl shadow-sm transition-colors duration-500">
+                <span key={i} className="text-sm font-semibold bg-[#0f172a]/90 text-amber-200 text-amber-100/90 border border-white/60 dark:border-white/20 px-4 py-1.5 rounded-xl shadow-sm transition-colors duration-500">
                   {tag}
                 </span>
               ))}
@@ -129,14 +129,14 @@ const Projects: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <h3 className="text-3xl font-bold text-amber-500 text-amber-100 tracking-tighter transition-colors duration-500 flex items-center gap-4">
+        <h3 className="text-3xl font-bold text-amber-200 text-amber-100 tracking-tighter transition-colors duration-500 flex items-center gap-4">
           <GithubIcon size={28} /> Other GitHub Repositories
         </h3>
       </motion.div>
 
       {loading ? (
         <div className="flex justify-center items-center py-12">
-          <Loader2 className="animate-spin text-amber-500 text-amber-100" size={40} />
+          <Loader2 className="animate-spin text-amber-200 text-amber-100" size={40} />
         </div>
       ) : repos.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -158,20 +158,20 @@ const Projects: React.FC = () => {
               viewport={{ once: true, margin: "-50px" }}
             >
               <div className="flex justify-between items-start mb-5">
-                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-xl font-bold text-amber-500 text-amber-100 hover:underline transition-colors duration-500 break-all tracking-tight">
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-xl font-bold text-amber-200 text-amber-100 hover:underline transition-colors duration-500 break-all tracking-tight">
                   {repo.name}
                 </a>
-                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-amber-500 text-amber-100 opacity-60 hover:opacity-100 hover:scale-110 transition-all flex-shrink-0 ml-3">
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-amber-200 text-amber-100 opacity-60 hover:opacity-100 hover:scale-110 transition-all flex-shrink-0 ml-3">
                   <ExternalLink size={20} />
                 </a>
               </div>
               
-              <p className="text-amber-500 text-blue-300 font-medium opacity-90 mb-8 flex-grow text-base leading-relaxed transition-colors duration-500">
+              <p className="text-amber-200 text-amber-200/70 font-medium opacity-90 mb-8 flex-grow text-base leading-relaxed transition-colors duration-500">
                 {repo.description || "No description provided."}
               </p>
               
               <div className="flex justify-between items-center mt-auto pt-5 border-t border-white/40 dark:border-white/10 transition-colors duration-500">
-                <span className="text-sm font-bold text-amber-500 text-blue-400 opacity-90 transition-colors duration-500 tracking-widest uppercase">
+                <span className="text-sm font-bold text-amber-200 text-amber-200/60 opacity-90 transition-colors duration-500 tracking-widest uppercase">
                   {repo.language || "Code"}
                 </span>
               </div>

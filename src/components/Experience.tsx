@@ -47,7 +47,7 @@ const Experience: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <h2 className="text-4xl font-bold text-amber-500 text-amber-100 tracking-tighter transition-colors duration-500">Experience</h2>
+        <h2 className="text-4xl font-bold text-amber-200 text-amber-100 tracking-tighter transition-colors duration-500">Experience</h2>
         <div className="h-1.5 w-16 bg-amber-900 dark:bg-white rounded-full mt-6 opacity-80 dark:opacity-60 transition-colors duration-500"></div>
       </motion.div>
 
@@ -70,17 +70,17 @@ const Experience: React.FC = () => {
             viewport={{ once: true, margin: "-50px" }}
           >
             <div className="hidden sm:flex shrink-0 w-16 h-16 bg-[#0f172a]/90 rounded-full shadow-sm items-center justify-center border border-white/60 dark:border-white/20 transition-colors duration-500">
-              <Briefcase size={24} className="text-amber-500 text-amber-100 transition-colors duration-500" />
+              <Briefcase size={24} className="text-amber-200 text-amber-100 transition-colors duration-500" />
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-amber-500 text-amber-100 tracking-tight transition-colors duration-500">{exp.role}</h3>
+              <h3 className="text-2xl font-bold text-amber-200 text-amber-100 tracking-tight transition-colors duration-500">{exp.role}</h3>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-2 mb-6">
-                <span className="text-lg text-amber-500 text-blue-200 font-semibold opacity-95 transition-colors duration-500">@ {exp.company}</span>
-                <span className="text-sm font-bold tracking-wider uppercase text-amber-500 text-blue-300 opacity-90 bg-[#0f172a]/90 px-4 py-1.5 rounded-full border border-white/60 dark:border-white/20 mt-3 sm:mt-0 inline-block w-fit transition-colors duration-500">
+                <span className="text-lg text-amber-200 text-amber-100/90 font-semibold opacity-95 transition-colors duration-500">@ {exp.company}</span>
+                <span className="text-sm font-bold tracking-wider uppercase text-amber-200 text-amber-200/70 opacity-90 bg-[#0f172a]/90 px-4 py-1.5 rounded-full border border-white/60 dark:border-white/20 mt-3 sm:mt-0 inline-block w-fit transition-colors duration-500">
                   {exp.date}
                 </span>
               </div>
-              <ul className="list-disc list-inside space-y-3 text-lg font-medium text-amber-500 text-blue-300 opacity-95 transition-colors duration-500">
+              <ul className="list-disc list-inside space-y-3 text-lg font-medium text-amber-200 text-amber-200/70 opacity-95 transition-colors duration-500">
                 {exp.duties.map((duty, i) => (
                   <li key={i} className="leading-relaxed">{duty}</li>
                 ))}

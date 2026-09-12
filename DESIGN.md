@@ -46,19 +46,19 @@ components:
 
 **Creative North Star: "Glitched Rust & Midnight"**
 
-This system replaces the prior clean slate with a highly kinetic, atmospheric identity. A deep, dark bluish metallic background (`#070b14`) is driven by a restless, iridescent rust-brown shader. The UI floats on thick, dark midnight glass panels, accented heavily by saturated amber and bronze (`bg-amber-800`, `text-amber-500`). The focal point of the identity is a CSS-driven chromatic glitch effect on the hero typography, lending it a chaotic, futuristic hacker aesthetic.
+This system replaces the prior clean slate with a highly kinetic, atmospheric identity. A deep, dark bluish metallic background (`#070b14`) is driven by a restless, iridescent rust-brown shader. The UI floats on thick, dark midnight glass panels, accented heavily by saturated amber and bronze (`bg-amber-800`, `text-amber-200`). The focal point of the identity is a CSS-driven chromatic glitch effect on the hero typography, lending it a chaotic, futuristic hacker aesthetic.
 
 **Key Characteristics:**
 - Kinetic, fast-moving bronze/rust fluid background over midnight blue.
 - Deep midnight glass cards (`bg-[#0f172a]/70`).
-- Saturated Bronze/Rust typography and buttons (`text-amber-500`, `bg-amber-800`).
+- Saturated Bronze/Rust typography and buttons (`text-amber-200`, `bg-amber-800`).
 - Chromatic aberration glitch effects (`glitch-effect`) on massive display text.
 - Heavy tactile elevation combined with buttery Lenis smooth scrolling.
 
 ## Colors
 
 ### Primary Accent (The Rust)
-- **Amber/Bronze** (`text-amber-500`, `bg-amber-800`): The signature accent color used for all highlights, buttons, and titles. It brings a fiery, metallic contrast against the dark background.
+- **Amber/Bronze** (`text-amber-200`, `bg-amber-800`): The signature accent color used for all highlights, buttons, and titles. It brings a fiery, metallic contrast against the dark background.
 
 ### Neutral (The Midnight)
 - **Deep Midnight Canvas** (`#070b14`): The underlying void.
@@ -73,8 +73,8 @@ This system replaces the prior clean slate with a highly kinetic, atmospheric id
 
 ### Hierarchy
 - **Display** (700, text-9xl, tracking-tighter, `.glitch-effect`): The hero title, constantly flickering with red and blue chromatic offsets.
-- **Headline** (700, text-4xl/5xl, text-amber-500): Used for major section titles.
-- **Body** (500, text-lg/xl, text-amber-500/80): Rust-tinted body text.
+- **Headline** (700, text-4xl/5xl, text-amber-200): Used for major section titles.
+- **Body** (500, text-lg/xl, text-amber-200/80): Rust-tinted body text.
 
 ## Elevation & Motion
 

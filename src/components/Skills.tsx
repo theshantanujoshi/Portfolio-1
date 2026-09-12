@@ -36,7 +36,7 @@ const Skills: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        <h2 className="text-4xl font-bold text-amber-500 text-amber-100 tracking-tighter transition-colors duration-500">Technical Skills</h2>
+        <h2 className="text-4xl font-bold text-amber-200 text-amber-100 tracking-tighter transition-colors duration-500">Technical Skills</h2>
         <div className="h-1.5 w-16 bg-amber-900 dark:bg-white rounded-full mt-6 opacity-80 dark:opacity-60 transition-colors duration-500"></div>
       </motion.div>
 
@@ -59,15 +59,15 @@ const Skills: React.FC = () => {
             viewport={{ once: true, margin: "-50px" }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-[#0f172a]/90 rounded-xl shadow-sm flex items-center justify-center border border-white/60 dark:border-white/20 text-amber-500 text-amber-100 transition-colors duration-500">
+              <div className="w-12 h-12 bg-[#0f172a]/90 rounded-xl shadow-sm flex items-center justify-center border border-white/60 dark:border-white/20 text-amber-200 text-amber-100 transition-colors duration-500">
                 {category.icon}
               </div>
-              <h3 className="font-bold text-amber-500 text-amber-100 text-xl tracking-tight transition-colors duration-500">{category.title}</h3>
+              <h3 className="font-bold text-amber-200 text-amber-100 text-xl tracking-tight transition-colors duration-500">{category.title}</h3>
             </div>
             
             <div className="flex flex-wrap gap-2.5">
               {category.skills.map((skill, i) => (
-                <span key={i} className="text-sm font-semibold bg-[#0f172a]/90 text-amber-500 text-blue-200 border border-white/60 dark:border-white/20 px-4 py-1.5 rounded-xl shadow-sm transition-colors duration-500">
+                <span key={i} className="text-sm font-semibold bg-[#0f172a]/90 text-amber-200 text-amber-100/90 border border-white/60 dark:border-white/20 px-4 py-1.5 rounded-xl shadow-sm transition-colors duration-500">
                   {skill}
                 </span>
               ))}
