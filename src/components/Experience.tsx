@@ -39,10 +39,10 @@ const Experience: React.FC = () => {
           
           {/* Left: Heading */}
           <div className="w-full lg:w-1/3">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black uppercase mb-4">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black dark:text-white uppercase mb-4">
               Operational<br/>Record
             </h2>
-            <div className="h-1 w-12 bg-black"></div>
+            <div className="h-1 w-12 bg-black dark:bg-white"></div>
           </div>
 
           {/* Right: Content */}
@@ -52,21 +52,21 @@ const Experience: React.FC = () => {
                 
                 {/* Timeline Line */}
                 {index !== experiences.length - 1 && (
-                  <div className="absolute left-6 top-16 bottom-[-3rem] w-[1px] bg-black/10"></div>
+                  <div className="absolute left-6 top-16 bottom-[-3rem] w-[1px] bg-black dark:bg-white/80"></div>
                 )}
 
                 <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 rounded-full bg-white/50 border border-white flex items-center justify-center shrink-0 shadow-sm z-10">
-                    <Briefcase size={20} className="text-black" />
+                  <div className="w-12 h-12 rounded-full bg-white dark:bg-black dark:bg-white/80 border border-white dark:border-white/ dark:border-black/ flex items-center justify-center shrink-0 shadow-sm z-10">
+                    <Briefcase size={20} className="text-black dark:text-white" />
                   </div>
                   
                   <div className="flex flex-col w-full">
                     <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-4">
                       <div>
-                        <h3 className="text-2xl font-black text-black tracking-tight">{exp.role}</h3>
-                        <p className="text-lg font-bold text-black/50 tracking-tight mt-1">{exp.company}</p>
+                        <h3 className="text-2xl font-black text-black dark:text-white tracking-tight">{exp.role}</h3>
+                        <p className="text-lg font-bold text-black dark:text-white/50 tracking-tight mt-1">{exp.company}</p>
                       </div>
-                      <span className="text-xs font-bold tracking-widest uppercase bg-black text-white px-4 py-2 rounded-full whitespace-nowrap w-fit">
+                      <span className="text-xs font-bold tracking-widest uppercase bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-full whitespace-nowrap w-fit">
                         {exp.duration}
                       </span>
                     </div>
@@ -74,8 +74,8 @@ const Experience: React.FC = () => {
                     <ul className="flex flex-col gap-3 mt-4">
                       {exp.description.map((item, i) => (
                         <li key={i} className="flex items-start gap-4">
-                          <span className="w-1.5 h-1.5 rounded-full bg-black/40 mt-2.5 shrink-0"></span>
-                          <span className="text-lg font-medium text-black/80 leading-relaxed text-balance">{item}</span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-black dark:bg-white/80 mt-2.5 shrink-0"></span>
+                          <span className="text-lg font-medium text-black dark:text-white/50 leading-relaxed text-balance">{item}</span>
                         </li>
                       ))}
                     </ul>

@@ -37,13 +37,13 @@ const Skills: React.FC = () => {
       >
         <div className="flex flex-col lg:flex-row gap-16 items-start mb-16">
           <div className="w-full lg:w-1/3">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black uppercase mb-4">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black dark:text-white uppercase mb-4">
               Technical<br/>Arsenal
             </h2>
-            <div className="h-1 w-12 bg-black"></div>
+            <div className="h-1 w-12 bg-black dark:bg-white"></div>
           </div>
           <div className="w-full lg:w-2/3">
-            <p className="text-2xl md:text-3xl font-medium text-black/90 leading-tight tracking-tight">
+            <p className="text-2xl md:text-3xl font-medium text-black dark:text-white/50 leading-tight tracking-tight">
               A comprehensive stack spanning low-level systems programming to high-level machine learning interfaces.
             </p>
           </div>
@@ -57,20 +57,20 @@ const Skills: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/50 border border-white p-8 rounded-[2rem] flex flex-col h-full"
+              className="bg-white dark:bg-black dark:bg-white/80 border border-white dark:border-white/ dark:border-black/ p-8 rounded-[2rem] flex flex-col h-full"
             >
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white shrink-0">
+                <div className="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center text-white dark:text-black shrink-0">
                   {category.icon}
                 </div>
-                <h3 className="text-2xl font-black text-black tracking-tight">{category.title}</h3>
+                <h3 className="text-2xl font-black text-black dark:text-white tracking-tight">{category.title}</h3>
               </div>
               
               <div className="flex flex-wrap gap-3 mt-auto">
                 {category.skills.map((skill, i) => (
                   <span 
                     key={i} 
-                    className="px-5 py-2.5 bg-black/5 hover:bg-black hover:text-white transition-colors duration-300 rounded-full text-sm font-bold tracking-widest uppercase text-black cursor-default"
+                    className="px-5 py-2.5 bg-black dark:bg-white/80 hover:bg-black dark:bg-white hover:text-white dark:text-black transition-colors duration-300 rounded-full text-sm font-bold tracking-widest uppercase text-black dark:text-white cursor-default"
                   >
                     {skill}
                   </span>

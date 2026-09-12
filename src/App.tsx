@@ -8,8 +8,11 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import GhostFibers from './components/GhostFibers';
 import Lenis from 'lenis';
+import { useTheme } from './contexts/ThemeContext';
 
 function App() {
+  const { theme } = useTheme();
+
   // Lenis smooth scroll logic
   useEffect(() => {
     const lenis = new Lenis({
@@ -34,16 +37,16 @@ function App() {
   }, []);
 
   return (
-    <main className="relative w-full min-h-screen bg-white font-sans selection:bg-black selection:text-white overflow-x-hidden">
+    <main className="relative w-full min-h-screen bg-white dark:bg-black font-sans selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black overflow-x-hidden transition-colors duration-500">
       {/* Ghost Fibers Background */}
-      <div className="fixed inset-0 -z-10 bg-white">
+      <div className="fixed inset-0 -z-10 bg-white dark:bg-black transition-colors duration-500">
         <GhostFibers
-          lineColor="#000000"
-          glowColor="#0f172a"
+          lineColor={theme === 'dark' ? '#ffffff' : '#000000'}
+          glowColor={theme === 'dark' ? '#f8fafc' : '#0f172a'}
           speed={0.4}
           scale={2.5}
           layers={6}
-          lightMode={true}
+          lightMode={theme !== 'dark'}
           vignette={0.5}
           glowIntensity={3.0}
         />

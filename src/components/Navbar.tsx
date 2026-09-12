@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Download, Menu, X } from 'lucide-react';
+import { Download, Menu, X, Moon, Sun } from 'lucide-react';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const { scrollY } = useScroll();
+  const { theme, toggleTheme } = useTheme();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -30,16 +32,16 @@ const Navbar: React.FC = () => {
         
         {/* Left: Logo */}
         <a href="#" className="flex items-center hover:opacity-70 transition-opacity">
-          <img src={`${import.meta.env.BASE_URL}h_logo.png`} alt="Logo" className="w-6 h-6 object-contain invert" />
+          <img src={`${import.meta.env.BASE_URL}h_logo.png`} alt="Logo" className="w-6 h-6 object-contain invert dark:invert-0" />
         </a>
 
         {/* Center: Links (Hidden on mobile) */}
-        <div className="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest uppercase text-black/70">
+        <div className="hidden md:flex items-center gap-8 text-xs font-bold tracking-widest uppercase text-black dark:text-white/50">
           {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`}
-              className="hover:text-black transition-colors"
+              className="hover:text-black dark:text-white transition-colors"
             >
               {item}
             </a>
@@ -48,10 +50,18 @@ const Navbar: React.FC = () => {
 
         {/* Right: Actions */}
         <div className="flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="p-2 text-black dark:text-white hover:opacity-70 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
           <a 
             href={`${import.meta.env.BASE_URL}resume.pdf`} 
             download="HARSH_PRATAP_SINGH_Resume.pdf"
-            className="hidden sm:flex items-center gap-2 bg-black text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black/80 transition-all hover:scale-105 active:scale-95"
+            className="hidden sm:flex items-center gap-2 bg-black dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black dark:bg-white/80 transition-all hover:scale-105 active:scale-95"
           >
             <span>Resume</span>
           </a>
@@ -59,7 +69,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-black hover:opacity-70 transition-colors"
+            className="md:hidden p-2 text-black dark:text-white hover:opacity-70 transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -79,7 +89,7 @@ const Navbar: React.FC = () => {
               key={item} 
               href={`#${item.toLowerCase()}`}
               onClick={() => setIsMenuOpen(false)}
-              className="text-black/80 hover:text-black font-bold text-lg tracking-tight uppercase"
+              className="text-black dark:text-white/50 hover:text-black dark:text-white font-bold text-lg tracking-tight uppercase"
             >
               {item}
             </a>
@@ -88,7 +98,7 @@ const Navbar: React.FC = () => {
             href={`${import.meta.env.BASE_URL}resume.pdf`} 
             download="HARSH_PRATAP_SINGH_Resume.pdf"
             onClick={() => setIsMenuOpen(false)}
-            className="flex items-center justify-center gap-2 bg-black text-white px-5 py-4 rounded-2xl text-sm font-bold uppercase tracking-widest mt-2"
+            className="flex items-center justify-center gap-2 bg-black dark:bg-white text-white dark:text-black px-5 py-4 rounded-2xl text-sm font-bold uppercase tracking-widest mt-2"
           >
             <Download size={16} />
             <span>Download Resume</span>
